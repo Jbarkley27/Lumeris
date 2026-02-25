@@ -17124,8 +17124,6 @@ GameObject:
   - component: {fileID: 1351484644}
   - component: {fileID: 1351484647}
   - component: {fileID: 1351484652}
-  - component: {fileID: 1351484654}
-  - component: {fileID: 1351484653}
   - component: {fileID: 1351484655}
   - component: {fileID: 1351484656}
   - component: {fileID: 1351484657}
@@ -17269,39 +17267,6 @@ MonoBehaviour:
   queryTriggerInteraction: 2
   blockWhenPointerOverUI: 0
   requireMousePresent: 1
---- !u!114 &1351484653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351484642}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d6965b79797e4c058beaed1b74fff62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ResourceUIManager
-  reputationText: {fileID: 0}
-  reputationIcon: {fileID: 0}
-  rankText: {fileID: 0}
-  rankIcon: {fileID: 0}
-  creditsText: {fileID: 0}
-  creditsIcon: {fileID: 0}
---- !u!114 &1351484654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351484642}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18e0669eee9ed41c084ba48ddfe9d1bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ResourceManager
-  Reputation: 0
-  Rank: 0
-  Credits: 0
 --- !u!114 &1351484655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17315,7 +17280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputManager
   _playerInput: {fileID: 1351484647}
-  _playerMovement: {fileID: 0}
+  _playerMovement: {fileID: 1972710504}
   ThrustInput: {x: 0, y: 0}
   CursorInput: {x: 0, y: 0}
   CursorPosition: {x: 0, y: 0, z: 0}
