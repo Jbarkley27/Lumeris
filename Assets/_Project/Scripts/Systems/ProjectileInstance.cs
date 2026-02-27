@@ -172,15 +172,14 @@ public class ProjectileInstance : MonoBehaviour
             return;
         }
 
-        string eventPath = string.IsNullOrWhiteSpace(definition.hitSfxEventPath)
-            ? AudioLibrary.Projectile_Hit_Basic
-            : definition.hitSfxEventPath;
-
-        if (!string.IsNullOrWhiteSpace(eventPath))
+        if (definition.hitSfxId == AudioSfxId.None)
         {
-            AudioManager.Instance.PlayOneShot(eventPath);
+            return;
         }
+
+        AudioManager.Instance.PlayOneShot(definition.hitSfxId);
     }
+
 
     /// <summary>
     /// Applies damage when hit target contains a WorldBlock.

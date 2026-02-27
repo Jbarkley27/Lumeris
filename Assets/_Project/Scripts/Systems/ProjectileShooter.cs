@@ -167,17 +167,11 @@ public class ProjectileShooter : MonoBehaviour
             ScreenShakeManager.Instance.DoShake(ScreenShakeManager.Instance.ShootProfile);
         }
 
-        // Placeholder audio hook (AudioLibrary default + per-definition override).
-        if (AudioManager.Instance != null)
+        // Placeholder audio hook using strongly-typed SFX ID.
+        if (AudioManager.Instance != null && definition.fireSfxId != AudioSfxId.None)
         {
-            string eventPath = string.IsNullOrWhiteSpace(definition.fireSfxEventPath)
-                ? AudioLibrary.Projectile_Fire_Basic
-                : definition.fireSfxEventPath;
-
-            if (!string.IsNullOrWhiteSpace(eventPath))
-            {
-                AudioManager.Instance.PlayOneShot(eventPath);
-            }
+            AudioManager.Instance.PlayOneShot(definition.fireSfxId);
         }
+
     }
 }

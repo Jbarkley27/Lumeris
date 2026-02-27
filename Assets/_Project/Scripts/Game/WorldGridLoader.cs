@@ -18,16 +18,6 @@ public class WorldGridLoader : MonoBehaviour
 
 
 
-    [Header("Block Prefabs")]
-    [Tooltip("Tier 1 block prefab. Must contain WorldBlock component.")]
-    [SerializeField] private GameObject tier1BlockPrefab;
-    [Tooltip("Tier 2 block prefab. Must contain WorldBlock component.")]
-    [SerializeField] private GameObject tier2BlockPrefab;
-    [Tooltip("Tier 3 block prefab. Must contain WorldBlock component.")]
-    [SerializeField] private GameObject tier3BlockPrefab;
-
-
-
     [Header("Lifecycle")]
     [Tooltip("When true, existing spawned blocks are cleared before loading.")]
     [SerializeField] private bool clearBeforeLoad = true;
@@ -58,6 +48,11 @@ public class WorldGridLoader : MonoBehaviour
     /// </summary>
     public IReadOnlyDictionary<Vector2Int, WorldBlock> BlocksByCoordinate => blocksByCoordinate;
 
+    [Header("Balance")]
+    [Tooltip("Global tier balance used for runtime HP/reward. Layout cells no longer provide these values.")]
+    [SerializeField] private BlockTierBalanceConfig tierBalanceConfig;
+
+
     /// <summary>
     /// Returns player spawn position in world space based on layout spawn cell.
     /// </summary>
@@ -73,50 +68,6 @@ public class WorldGridLoader : MonoBehaviour
             return layout.GetWorldPosition(layout.playerSpawnCell.x, layout.playerSpawnCell.y);
         }
     }
-
-
-
-
-    [System.Serializable]
-    private class SpecialBlockPrefabEntry
-    {
-        [Tooltip("Type key that must match BlockCellData.specialBlockTypeId.")]
-        public string typeId;
-        [Tooltip("Prefab to spawn for this special type.")]
-        public GameObject prefab;
-    }
-
-    [Tooltip("Special prefab mapping by typeId. Allows multiple special block families in one floor.")]
-    [SerializeField] private SpecialBlockPrefabEntry[] specialBlockPrefabs;
-    private readonly Dictionary<string, GameObject> specialPrefabByTypeId = new Dictionary<string, GameObject>();
-
-
-    private void Awake()
-    {
-        RebuildSpecialPrefabLookup();
-    }
-
-    private void RebuildSpecialPrefabLookup()
-    {
-        specialPrefabByTypeId.Clear();
-
-        if (specialBlockPrefabs == null)
-        {
-            return;
-        }
-
-        for (int i = 0; i < specialBlockPrefabs.Length; i++)
-        {
-            SpecialBlockPrefabEntry entry = specialBlockPrefabs[i];
-            if (entry == null || string.IsNullOrWhiteSpace(entry.typeId) || entry.prefab == null)
-            {
-                continue;
-            }
-
-            specialPrefabByTypeId[entry.typeId] = entry.prefab;
-        }
-    }
-
 
 
 
@@ -140,6 +91,13 @@ public class WorldGridLoader : MonoBehaviour
             Debug.LogError("WorldGridLoader.LoadWorld failed: layout is null.");
             return;
         }
+
+        if (tierBalanceConfig == null)
+        {
+            Debug.LogError("WorldGridLoader.LoadWorld failed: tierBalanceConfig is null.");
+            return;
+        }
+
 
         if (blocksParent == null)
         {
@@ -166,15 +124,23 @@ public class WorldGridLoader : MonoBehaviour
                     continue;
                 }
 
-                GameObject prefabToSpawn = ResolvePrefabForCell(cell);
+                // Prefab selection is now owned by the layout asset (per-floor mapping).
+                GameObject prefabToSpawn = layout.ResolvePrefabForCell(cell);
+
                 if (prefabToSpawn == null)
                 {
                     Debug.LogWarning($"WorldGridLoader: No prefab resolved for cell ({x}, {y}) in floor '{layout.floorId}'.");
                     continue;
                 }
 
+                // Base grid position from layout.
                 Vector3 spawnPosition = layout.GetWorldPosition(x, y);
+
+                // Apply saved per-cell height offset so handcrafted patterns persist in play mode.
+                spawnPosition.y += cell.heightOffset;
+
                 GameObject spawnedObject = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity, blocksParent);
+
 
                 WorldBlock block = spawnedObject.GetComponent<WorldBlock>();
                 if (block == null)
@@ -187,20 +153,45 @@ public class WorldGridLoader : MonoBehaviour
                 Vector2Int coordinate = new Vector2Int(x, y);
                 string blockId = layout.BuildBlockId(x, y);
 
+                // Base stats from global block tier definition (Tier1..Tier5 baseline).
+                TierRuntimeStats baseStats = tierBalanceConfig.GetRuntimeStats(cell.tier);
+
+                // Extra scaling by layout progression tier (1..5).
+                LayoutTierRuntimeMultipliers layoutTierMultipliers = tierBalanceConfig.GetLayoutTierMultipliers(layout.LayoutTier);
+
+                // Floor/color/layout-wide scaling.
+                float floorHpMultiplier = Mathf.Max(0f, layout.FloorHpMultiplier);
+                float floorRewardMultiplier = Mathf.Max(0f, layout.FloorRewardMultiplier);
+
+                // Final scalar = floor scalar * layout-tier scalar.
+                float finalHpScalar = floorHpMultiplier * layoutTierMultipliers.hpMultiplier;
+                float finalRewardScalar = floorRewardMultiplier * layoutTierMultipliers.rewardMultiplier;
+
+                // Final runtime stats passed to block init.
+                int finalMaxHp = Mathf.Max(1, Mathf.RoundToInt(baseStats.maxHp * finalHpScalar));
+                int finalGlassReward = Mathf.Max(0, Mathf.RoundToInt(baseStats.glassReward * finalRewardScalar));
+
+
                 block.Initialize(new WorldBlockInitData
                 {
                     blockId = blockId,
                     floorId = layout.floorId,
                     gridCoordinate = coordinate,
+
+                    // Tier still comes from the painted layout cell.
                     tier = cell.tier,
-                    maxHp = cell.maxHp,
-                    glassReward = cell.glassReward,
+
+                    // HP and reward now come from balance config (not per-cell values).
+                    maxHp = finalMaxHp,
+                    glassReward = finalGlassReward,
+
+
                     isSpecialConditionBlock = cell.isSpecialConditionBlock,
 
-                    // Propagate level-authored destruction rule into runtime block.
+                    // Destructibility remains a level-authored property.
                     canBeDestroyed = cell.canBeDestroyed,
-
                 });
+
 
                 blocksByCoordinate[coordinate] = block;
                 blocksById[blockId] = block;
@@ -265,41 +256,6 @@ public class WorldGridLoader : MonoBehaviour
     }
 
     /// <summary>
-    /// Chooses which prefab to spawn for a given cell.
-    /// </summary>
-    private GameObject ResolvePrefabForCell(BlockCellData cell)
-    {
-        if (cell.isSpecialConditionBlock)
-        {
-            if (string.IsNullOrWhiteSpace(cell.specialBlockTypeId))
-            {
-                Debug.LogWarning("Special block cell is missing specialBlockTypeId.");
-                return null;
-            }
-
-            if (specialPrefabByTypeId.TryGetValue(cell.specialBlockTypeId, out GameObject specialPrefab))
-            {
-                return specialPrefab;
-            }
-
-            Debug.LogWarning($"No special prefab mapped for typeId '{cell.specialBlockTypeId}'.");
-            return null;
-        }
-
-        switch (cell.tier)
-        {
-            case BlockTier.Tier1:
-                return tier1BlockPrefab;
-            case BlockTier.Tier2:
-                return tier2BlockPrefab;
-            case BlockTier.Tier3:
-                return tier3BlockPrefab;
-            default:
-                return tier1BlockPrefab;
-        }
-    }
-
-    /// <summary>
     /// Destroys objects correctly in play mode and edit mode.
     /// </summary>
     private static void SafeDestroy(GameObject target)
@@ -317,11 +273,6 @@ public class WorldGridLoader : MonoBehaviour
         {
             DestroyImmediate(target);
         }
-    }
-
-    private void OnValidate()
-    {
-        RebuildSpecialPrefabLookup();
     }
 
 }

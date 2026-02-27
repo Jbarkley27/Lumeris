@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e3445f54d734be295553d47534ad80, type: 3}
+  m_Name: Basic_Projectile
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileDefinition
+  projectilePrefab: {fileID: 2951250209424267304, guid: 61b1f3888d4874750b2798e232bd53f6, type: 3}
+  prewarmCount: 16
+  speed: 80
+  lifetimeSeconds: 4
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  damage: 1
+  destroyOnFirstHit: 1
+  maxHitsBeforeDespawn: 1
+  muzzleVfxPrefab: {fileID: 4462527361317752304, guid: ee7a76fbefe744ca7be48f8258bd2fb3, type: 3}
+  hitVfxPrefab: {fileID: 1832820112507143047, guid: 8219cfbf2edcc46a48fe0a43e192b2e2, type: 3}
+  playerKnockbackOnFire: 10
+  applyShootShake: 1
+  applyHitShake: 0
+  fireSfxId: 2000
+  hitSfxId: 2001
+  damagePopupVfxPrefab: {fileID: 6193695181535097819, guid: 7d65d6cf347214ad495ae11c15d99bd8, type: 3}
+  damagePopupOffset: {x: 0, y: 0, z: 0}
+  parentDamagePopupToHitTarget: 0
+  spawnDamagePopupOnBlockedHit: 1

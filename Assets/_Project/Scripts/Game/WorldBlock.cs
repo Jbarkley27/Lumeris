@@ -180,7 +180,7 @@ public class WorldBlock : MonoBehaviour
             return;
         }
 
-        AudioManager.Instance.PlayOneShot(AudioLibrary.World_BlockHit_Indestructible);
+        AudioManager.Instance.PlayOneShot(AudioSfxId.World_BlockHit_Indestructible);
     }
 
 

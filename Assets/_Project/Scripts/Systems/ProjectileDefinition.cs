@@ -41,11 +41,13 @@ public class ProjectileDefinition : ScriptableObject
     [Tooltip("Uses ScreenShakeManager.DamagedProfile when hitting.")]
     public bool applyHitShake = false;
 
-    [Header("Audio (FMOD Event Path Overrides)")]
-    [Tooltip("Optional override. If empty, AudioLibrary.Projectile_Fire_Basic is used.")]
-    public string fireSfxEventPath = "";
-    [Tooltip("Optional override. If empty, AudioLibrary.Projectile_Hit_Basic is used.")]
-    public string hitSfxEventPath = "";
+    [Header("Audio (Enum IDs)")]
+    [Tooltip("Fire SFX enum ID resolved by AudioLibrary.")]
+    public AudioSfxId fireSfxId = AudioSfxId.Projectile_Fire_Basic;
+
+    [Tooltip("Hit SFX enum ID resolved by AudioLibrary.")]
+    public AudioSfxId hitSfxId = AudioSfxId.Projectile_Hit_Basic;
+
 
     [Header("Damage Popup Placeholder")]
     [Tooltip("Optional popup VFX prefab spawned when damage is successfully applied.")]
