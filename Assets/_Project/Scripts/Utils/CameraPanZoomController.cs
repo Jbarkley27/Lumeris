@@ -49,7 +49,7 @@ public class CameraPanZoomController : MonoBehaviour
             _hasWarnedMissingRefs = true;
         }
 
-        SwitchToCameraMode(CurrentCameraMode);
+        // SwitchToCameraMode(CurrentCameraMode);
         // overviewCamera.gameObject.transform.position = focusCamera.gameObject.transform.position;
 
     }
@@ -59,8 +59,8 @@ public class CameraPanZoomController : MonoBehaviour
     {
         if (_hasWarnedMissingRefs) return;
 
-        ReadPanInput();
-        SyncCameras();
+        // ReadPanInput();
+        // SyncCameras();
     }
 
 
@@ -68,7 +68,7 @@ public class CameraPanZoomController : MonoBehaviour
     {
         if (_hasWarnedMissingRefs) return;
 
-        HandleDragPan();  
+        // HandleDragPan();  
     }
 
 
