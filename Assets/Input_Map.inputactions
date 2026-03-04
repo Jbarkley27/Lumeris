@@ -235,6 +235,28 @@
                     "action": "ZoomOut",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "34f7da22-91e3-446d-8fae-7bd57059eb2e",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";M&K",
+                    "action": "ShootBlaster",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "875652c3-fa3c-4831-b9b8-4fe898a9730f",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "ShootBlaster",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

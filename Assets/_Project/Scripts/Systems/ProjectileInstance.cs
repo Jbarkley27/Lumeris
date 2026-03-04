@@ -19,6 +19,7 @@ public class ProjectileInstance : MonoBehaviour
 
     // Team of the shooter that fired this projectile.
     private ProjectileOwner ownerTeam;
+    private GameObject damagePopupInstance; // Reference to the spawned damage popup, if any.
 
 
     /// <summary>
@@ -131,7 +132,7 @@ public class ProjectileInstance : MonoBehaviour
         bool damageApplied = ApplyDamageIfBlock(hit);
 
         // Spawn popup placeholder object (configured by definition flags).
-        SpawnDamagePopupVfx(hit, damageApplied);
+        // SpawnDamagePopupVfx(hit, damageApplied);
 
         if (definition.applyHitShake && ScreenShakeManager.Instance != null)
         {
@@ -162,7 +163,8 @@ public class ProjectileInstance : MonoBehaviour
             ? Quaternion.LookRotation(hit.normal)
             : Quaternion.identity;
 
-        Instantiate(definition.hitVfxPrefab, hit.point, rotation);
+        GameObject damagePopupInstance = Instantiate(definition.hitVfxPrefab, hit.point, rotation);
+        Destroy(damagePopupInstance, 1.2f); // Cleanup after 2 seconds (tweak if needed)
     }
 
     private void PlayHitAudio()
@@ -228,7 +230,8 @@ public class ProjectileInstance : MonoBehaviour
             parent = hit.collider.transform;
         }
 
-        Instantiate(definition.damagePopupVfxPrefab, spawnPosition, Quaternion.identity, parent);
+        GameObject vfx =Instantiate(definition.damagePopupVfxPrefab, spawnPosition, Quaternion.identity, parent);
+        Destroy(vfx, 1.5f); // Cleanup after 2 seconds (tweak if needed)
     }
 
 

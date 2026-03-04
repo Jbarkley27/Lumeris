@@ -31,7 +31,11 @@ public class TextPopup : MonoBehaviour
         .OnComplete(() =>
         {
             textMesh.DOFade(0f, fadeDuration).SetEase(Ease.InCubic)
-            .OnComplete(() => Destroy(gameObject));
+            .OnComplete(() =>
+            {
+                Debug.Log("Destroying text popup");
+                Destroy(gameObject);
+            });
         });
 
         gameObject.transform.DOScale(Vector3.one, .15f).SetEase(Ease.OutBack);

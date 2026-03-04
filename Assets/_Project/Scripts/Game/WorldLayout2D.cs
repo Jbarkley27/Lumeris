@@ -27,10 +27,6 @@ public class WorldLayout2D : ScriptableObject
     [Tooltip("World-space origin for cell (0, 0).")]
     public Vector3 worldOrigin = Vector3.zero;
 
-    [Header("Player Spawn")]
-    [Tooltip("Spawn cell for player when entering this floor.")]
-    public Vector2Int playerSpawnCell = new Vector2Int(0, 0);
-
     [Header("Cells")]
     [SerializeField]
     private BlockCellData[] cells = Array.Empty<BlockCellData>();
@@ -107,9 +103,6 @@ public class WorldLayout2D : ScriptableObject
     {
         // Keep serialized array size aligned with width*height in editor changes.
         EnsureCellArraySize();
-
-        // Keep spawn cell valid if grid dimensions are edited.
-        ClampSpawnCellToBounds();
 
         // Keep special prefab lookup in sync with inspector edits.
         RebuildSpecialPrefabLookup();
@@ -230,11 +223,8 @@ public class WorldLayout2D : ScriptableObject
     }
 
 
-    private void ClampSpawnCellToBounds()
-    {
-        playerSpawnCell.x = Mathf.Clamp(playerSpawnCell.x, 0, Mathf.Max(0, width - 1));
-        playerSpawnCell.y = Mathf.Clamp(playerSpawnCell.y, 0, Mathf.Max(0, height - 1));
-    }
+
+
 
 
     /// <summary>
@@ -282,6 +272,9 @@ public class WorldLayout2D : ScriptableObject
 
     }
 
+
+
+
     /// <summary>
     /// Ensures runtime lookup exists (OnValidate is editor-only, so runtime may still need build).
     /// </summary>
@@ -292,6 +285,9 @@ public class WorldLayout2D : ScriptableObject
             RebuildSpecialPrefabLookup();
         }
     }
+
+
+    
 
     /// <summary>
     /// Rebuilds special typeId -> prefab lookup from serialized mapping entries.

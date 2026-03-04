@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+
 
 /// <summary>
 /// Spawns WorldBlock prefabs from a WorldLayout2D asset.
@@ -52,22 +54,233 @@ public class WorldGridLoader : MonoBehaviour
     [Tooltip("Global tier balance used for runtime HP/reward. Layout cells no longer provide these values.")]
     [SerializeField] private BlockTierBalanceConfig tierBalanceConfig;
 
+    [Header("Debug Layout Override")]
+    [Tooltip("When enabled, loader uses Debug Layout instead of the normal source layout.")]
+    [SerializeField] private bool useDebugLayoutOverride = false;
+
+    [Tooltip("Debug/test layout asset used when override is enabled.")]
+    [SerializeField] private WorldLayout2D debugLayoutOverride;
+
+    [Tooltip("If true, debug override is only allowed while running in Unity Editor.")]
+    [SerializeField] private bool debugOverrideEditorOnly = true;
+
+    [Header("Spawn Animation (Play Mode)")]
+    [Tooltip("If true, blocks animate in with a slight stagger when spawned during play mode.")]
+    [SerializeField] private bool animateSpawnOnLoad = true;
+
+    [Min(0f)]
+    [Tooltip("Delay between each spawned block animation in seconds.")]
+    [SerializeField] private float spawnStaggerSeconds = 0.003f;
+
+    [Min(0.01f)]
+    [Tooltip("Duration of each block spawn scale animation.")]
+    [SerializeField] private float spawnTweenDuration = 0.12f;
+
+    [Range(0.01f, 1f)]
+    [Tooltip("Starting scale factor for spawn animation. 1 = no scale-in effect.")]
+    [SerializeField] private float spawnStartScaleFactor = 0.2f;
+
+    [Tooltip("Tween ease used for block spawn animation.")]
+    [SerializeField] private Ease spawnTweenEase = Ease.OutBack;
+
+    [Header("Debug Logging")]
+    [Tooltip("Logs which layout source was used (default vs debug override) when loading.")]
+    [SerializeField] private bool logActiveLayoutOnLoad = true;
+
+    // Cached debug state from the last load operation.
+    private WorldLayout2D lastLoadedLayout;
+    private bool lastLoadUsedDebugOverride;
 
     /// <summary>
-    /// Returns player spawn position in world space based on layout spawn cell.
+    /// Last resolved layout name used by LoadWorld, useful for runtime debug panels.
+    /// </summary>
+    public string DebugActiveLayoutName => lastLoadedLayout != null ? lastLoadedLayout.name : "(none)";
+
+    /// <summary>
+    /// Last resolved floor id used by LoadWorld.
+    /// </summary>
+    public string DebugActiveFloorId => lastLoadedLayout != null ? lastLoadedLayout.floorId : "(none)";
+
+    /// <summary>
+    /// True when last load used debug override layout source.
+    /// </summary>
+    public bool DebugUsedDebugOverride => lastLoadUsedDebugOverride;
+
+    /// <summary>
+    /// Number of currently spawned blocks tracked by loader.
+    /// </summary>
+    public int DebugSpawnedBlockCount => blocksByCoordinate.Count;
+
+
+    [Header("Spawn Safety")]
+    [Tooltip("If true, blocks inside a square around the computed center spawn cell are skipped.")]
+    [SerializeField] private bool enforceSpawnSafeArea = true;
+
+    [Min(0)]
+    [Tooltip("Safe zone radius in cells around center spawn. 0=single cell, 1=3x3, 2=5x5.")]
+    [SerializeField] private int spawnSafeRadiusCells = 1;
+
+    [Header("Player Reposition On Load")]
+    [Tooltip("If true, player is moved to computed center spawn each time a level loads.")]
+    [SerializeField] private bool repositionPlayerOnLoad = true;
+
+    [Tooltip("Optional explicit player reference. If null and auto-find is enabled, loader will find PlayerMovement.")]
+    [SerializeField] private PlayerMovement playerToReposition;
+
+    [Tooltip("If true and player reference is missing, loader will find PlayerMovement in scene.")]
+    [SerializeField] private bool autoFindPlayerIfMissing = true;
+
+    [Tooltip("Optional world-space Y offset applied on top of center spawn height.")]
+    [SerializeField] private float playerSpawnYOffset = 0f;
+
+
+
+    /// <summary>
+    /// Exposes whether spawn safe-zone clearing is enabled.
+    /// Useful for runtime debug UI.
+    /// </summary>
+    public bool DebugEnforceSpawnSafeArea => enforceSpawnSafeArea;
+
+    /// <summary>
+    /// Exposes configured safe-zone radius in cells.
+    /// Useful for runtime debug UI.
+    /// </summary>
+    public int DebugSpawnSafeRadiusCells => spawnSafeRadiusCells;
+
+    /// <summary>
+    /// Exposes computed spawn world position currently used by loader.
+    /// </summary>
+    public Vector3 DebugSpawnWorldPosition => PlayerSpawnWorldPosition;
+
+
+    [Header("Spawn Punch")]
+    [SerializeField] private bool useSpawnPunch = true;
+    [Range(0.05f, 1.5f)] [SerializeField] private float spawnPunchStrength = 0.55f;
+    [Min(0.05f)] [SerializeField] private float spawnPunchDuration = 0.22f;
+    [Range(1, 20)] [SerializeField] private int spawnPunchVibrato = 5;
+    [Range(0f, 1f)] [SerializeField] private float spawnPunchElasticity = 0.9f;
+
+
+
+
+
+
+
+
+
+    /// <summary>
+    /// Resolves which layout should be used for this load call.
+    /// Priority:
+    /// 1) Debug override layout (if enabled, assigned, and allowed in current runtime)
+    /// 2) Default layout reference
+    /// </summary>
+    private WorldLayout2D ResolveActiveLayout()
+    {
+        // Explicit user toggle to force debug layout during iteration/testing.
+        bool wantsDebugOverride = useDebugLayoutOverride;
+
+        // Override only works when a debug asset is actually assigned.
+        bool hasDebugLayout = debugLayoutOverride != null;
+
+        // Prevent shipping debug override in builds when desired.
+        bool debugAllowedHere = !debugOverrideEditorOnly || Application.isEditor;
+
+        if (wantsDebugOverride && hasDebugLayout && debugAllowedHere)
+        {
+            return debugLayoutOverride;
+        }
+
+        // Fallback to standard layout source.
+        return layout;
+    }
+
+
+
+
+    /// <summary>
+    /// Returns player spawn position in world space based on center cell of active layout.
+    /// For even dimensions, this uses the lower-center deterministic cell.
     /// </summary>
     public Vector3 PlayerSpawnWorldPosition
     {
         get
         {
-            if (layout == null)
+            WorldLayout2D activeLayout = ResolveActiveLayout();
+            if (activeLayout == null)
             {
                 return Vector3.zero;
             }
 
-            return layout.GetWorldPosition(layout.playerSpawnCell.x, layout.playerSpawnCell.y);
+            Vector2Int centerSpawnCell = GetCenterSpawnCell(activeLayout);
+            Vector3 spawn = activeLayout.GetWorldPosition(centerSpawnCell.x, centerSpawnCell.y);
+            spawn.y += playerSpawnYOffset;
+
+            return spawn;
         }
     }
+
+
+
+
+
+
+
+    /// <summary>
+    /// Computes deterministic center spawn cell from layout dimensions.
+    /// Odd sizes map to exact center cell.
+    /// Even sizes map to lower-center cell (stable and predictable).
+    /// Example: width=6 -> center x = 2 (between 2 and 3, we pick 2).
+    /// </summary>
+    private static Vector2Int GetCenterSpawnCell(WorldLayout2D activeLayout)
+    {
+        int centerX = (activeLayout.width - 1) / 2;
+        int centerY = (activeLayout.height - 1) / 2;
+        return new Vector2Int(centerX, centerY);
+    }
+
+
+
+
+
+    /// <summary>
+    /// Moves player to the center spawn point on level load and clears velocity.
+    /// This avoids stale momentum carrying into a newly loaded level.
+    /// </summary>
+    private void MovePlayerToSpawnPoint(WorldLayout2D activeLayout)
+    {
+        if (!repositionPlayerOnLoad || activeLayout == null)
+        {
+            return;
+        }
+
+        if (playerToReposition == null && autoFindPlayerIfMissing)
+        {
+            playerToReposition = FindFirstObjectByType<PlayerMovement>();
+        }
+
+        if (playerToReposition == null)
+        {
+            Debug.LogWarning("WorldGridLoader: Could not move player to spawn because PlayerMovement was not found.");
+            return;
+        }
+
+        Vector3 spawnWorld = PlayerSpawnWorldPosition;
+
+        // Prefer rigidbody-safe teleport path when available.
+        if (playerToReposition._rb != null)
+        {
+            playerToReposition._rb.linearVelocity = Vector3.zero;
+            playerToReposition._rb.angularVelocity = Vector3.zero;
+            playerToReposition._rb.position = spawnWorld;
+        }
+        else
+        {
+            playerToReposition.transform.position = spawnWorld;
+        }
+    }
+
+
+
 
 
 
@@ -80,17 +293,47 @@ public class WorldGridLoader : MonoBehaviour
         }
     }
 
+
+
+
+
+
+    
+
     /// <summary>
-    /// Spawns all blocks described by the assigned layout.
+    /// Spawns all blocks described by the resolved active layout.
+    /// Active layout can be normal source or debug override source.
     /// </summary>
     [ContextMenu("Load World")]
     public void LoadWorld()
     {
-        if (layout == null)
+        // Resolve runtime layout source first so all downstream logic uses one consistent asset.
+        WorldLayout2D activeLayout = ResolveActiveLayout();
+
+        if (activeLayout == null)
         {
-            Debug.LogError("WorldGridLoader.LoadWorld failed: layout is null.");
+            Debug.LogError("WorldGridLoader.LoadWorld failed: no active layout resolved (default/debug both missing).");
             return;
         }
+
+
+        lastLoadedLayout = activeLayout;
+        lastLoadUsedDebugOverride =
+            useDebugLayoutOverride &&
+            debugLayoutOverride != null &&
+            activeLayout == debugLayoutOverride;
+
+        if (logActiveLayoutOnLoad)
+        {
+            Debug.Log(
+                $"WorldGridLoader.LoadWorld -> Source={(lastLoadUsedDebugOverride ? "DEBUG" : "DEFAULT")} " +
+                $"Layout='{activeLayout.name}' FloorId='{activeLayout.floorId}'");
+        }
+
+
+
+
+
 
         if (tierBalanceConfig == null)
         {
@@ -98,25 +341,39 @@ public class WorldGridLoader : MonoBehaviour
             return;
         }
 
+        // Optional hint when debug toggle is on but no debug asset exists.
+        if (useDebugLayoutOverride && debugLayoutOverride == null)
+        {
+            Debug.LogWarning("WorldGridLoader: Debug override enabled, but debugLayoutOverride is not assigned. Using default layout.");
+        }
 
         if (blocksParent == null)
         {
             blocksParent = transform;
         }
 
-        // Ensure array size is valid before reading cells.
-        layout.EnsureCellArraySize();
+        // Ensure layout cell array matches current width/height before we read from it.
+        activeLayout.EnsureCellArraySize();
 
         if (clearBeforeLoad)
         {
             ClearSpawnedBlocks();
         }
 
-        for (int y = 0; y < layout.height; y++)
+
+        // Move player first so camera/follow systems see correct position immediately.
+        MovePlayerToSpawnPoint(activeLayout);
+
+
+
+        int spawnOrder = 0;
+
+
+        for (int y = 0; y < activeLayout.height; y++)
         {
-            for (int x = 0; x < layout.width; x++)
+            for (int x = 0; x < activeLayout.width; x++)
             {
-                BlockCellData cell = layout.GetCell(x, y);
+                BlockCellData cell = activeLayout.GetCell(x, y);
 
                 // Skip empty cells.
                 if (cell == null || !cell.hasBlock)
@@ -124,23 +381,29 @@ public class WorldGridLoader : MonoBehaviour
                     continue;
                 }
 
-                // Prefab selection is now owned by the layout asset (per-floor mapping).
-                GameObject prefabToSpawn = layout.ResolvePrefabForCell(cell);
-
-                if (prefabToSpawn == null)
+                // Skip cells inside the player spawn safe area if that option is enabled.
+                if (IsInsideSpawnSafeArea(activeLayout, x, y))
                 {
-                    Debug.LogWarning($"WorldGridLoader: No prefab resolved for cell ({x}, {y}) in floor '{layout.floorId}'.");
                     continue;
                 }
 
-                // Base grid position from layout.
-                Vector3 spawnPosition = layout.GetWorldPosition(x, y);
 
-                // Apply saved per-cell height offset so handcrafted patterns persist in play mode.
+                // Prefab selection remains layout-owned (tier mapping + special mapping).
+                GameObject prefabToSpawn = activeLayout.ResolvePrefabForCell(cell);
+
+                if (prefabToSpawn == null)
+                {
+                    Debug.LogWarning($"WorldGridLoader: No prefab resolved for cell ({x}, {y}) in floor '{activeLayout.floorId}'.");
+                    continue;
+                }
+
+                // Base grid position from active layout.
+                Vector3 spawnPosition = activeLayout.GetWorldPosition(x, y);
+
+                // Apply saved per-cell height offset for authored/procedural vertical variation.
                 spawnPosition.y += cell.heightOffset;
 
                 GameObject spawnedObject = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity, blocksParent);
-
 
                 WorldBlock block = spawnedObject.GetComponent<WorldBlock>();
                 if (block == null)
@@ -151,17 +414,18 @@ public class WorldGridLoader : MonoBehaviour
                 }
 
                 Vector2Int coordinate = new Vector2Int(x, y);
-                string blockId = layout.BuildBlockId(x, y);
+                string blockId = activeLayout.BuildBlockId(x, y);
 
-                // Base stats from global block tier definition (Tier1..Tier5 baseline).
+                // Base stats from global block tier definition.
                 TierRuntimeStats baseStats = tierBalanceConfig.GetRuntimeStats(cell.tier);
 
-                // Extra scaling by layout progression tier (1..5).
-                LayoutTierRuntimeMultipliers layoutTierMultipliers = tierBalanceConfig.GetLayoutTierMultipliers(layout.LayoutTier);
+                // Tier-scaling multiplier comes from the active layout tier progression value.
+                LayoutTierRuntimeMultipliers layoutTierMultipliers =
+                    tierBalanceConfig.GetLayoutTierMultipliers(activeLayout.LayoutTier);
 
-                // Floor/color/layout-wide scaling.
-                float floorHpMultiplier = Mathf.Max(0f, layout.FloorHpMultiplier);
-                float floorRewardMultiplier = Mathf.Max(0f, layout.FloorRewardMultiplier);
+                // Floor/color/layout multipliers from active layout.
+                float floorHpMultiplier = Mathf.Max(0f, activeLayout.FloorHpMultiplier);
+                float floorRewardMultiplier = Mathf.Max(0f, activeLayout.FloorRewardMultiplier);
 
                 // Final scalar = floor scalar * layout-tier scalar.
                 float finalHpScalar = floorHpMultiplier * layoutTierMultipliers.hpMultiplier;
@@ -171,33 +435,111 @@ public class WorldGridLoader : MonoBehaviour
                 int finalMaxHp = Mathf.Max(1, Mathf.RoundToInt(baseStats.maxHp * finalHpScalar));
                 int finalGlassReward = Mathf.Max(0, Mathf.RoundToInt(baseStats.glassReward * finalRewardScalar));
 
-
                 block.Initialize(new WorldBlockInitData
                 {
                     blockId = blockId,
-                    floorId = layout.floorId,
+                    floorId = activeLayout.floorId,
                     gridCoordinate = coordinate,
-
-                    // Tier still comes from the painted layout cell.
                     tier = cell.tier,
-
-                    // HP and reward now come from balance config (not per-cell values).
                     maxHp = finalMaxHp,
                     glassReward = finalGlassReward,
-
-
                     isSpecialConditionBlock = cell.isSpecialConditionBlock,
 
-                    // Destructibility remains a level-authored property.
+                    // Destructibility remains level-authored.
                     canBeDestroyed = cell.canBeDestroyed,
                 });
+
+                PlaySpawnTween(spawnedObject.transform, spawnOrder);
+                spawnOrder++;
 
 
                 blocksByCoordinate[coordinate] = block;
                 blocksById[blockId] = block;
             }
         }
+
+
+        
     }
+
+
+
+
+
+
+
+    /// <summary>
+    /// Returns true when a cell is inside center-spawn safe area.
+    /// This guarantees clear space around the player's start position.
+    /// </summary>
+    private bool IsInsideSpawnSafeArea(WorldLayout2D activeLayout, int x, int y)
+    {
+        if (!enforceSpawnSafeArea || activeLayout == null)
+        {
+            return false;
+        }
+
+        Vector2Int spawn = GetCenterSpawnCell(activeLayout);
+        int dx = Mathf.Abs(x - spawn.x);
+        int dy = Mathf.Abs(y - spawn.y);
+
+        return dx <= spawnSafeRadiusCells && dy <= spawnSafeRadiusCells;
+    }
+
+
+
+
+
+
+
+    /// <summary>
+    /// Plays spawn animation:
+    /// 1) scale in from small -> full
+    /// 2) optional punch at full size
+    /// This keeps final scale correct while preserving punch style.
+    /// </summary>
+    private void PlaySpawnTween(Transform target, int spawnOrder)
+    {
+        if (!animateSpawnOnLoad || !Application.isPlaying || target == null)
+        {
+            return;
+        }
+
+        Vector3 fullScale = target.localScale;
+        Vector3 startScale = fullScale * spawnStartScaleFactor;
+
+        // Kill prior tweens on this transform to prevent stacking.
+        target.DOKill(false);
+        target.localScale = startScale;
+
+        float delay = spawnOrder * spawnStaggerSeconds;
+
+        Sequence seq = DOTween.Sequence();
+        seq.SetDelay(delay);
+
+        float baseScale = Mathf.Max(fullScale.x, Mathf.Max(fullScale.y, fullScale.z));
+        float punchMagnitude = Mathf.Max(0.05f, baseScale * spawnPunchStrength);
+        Vector3 punch = Vector3.one * punchMagnitude;
+
+        // Step 1: scale in.
+        seq.Append(target.DOScale(fullScale, spawnTweenDuration).SetEase(spawnTweenEase));
+
+        // Step 2: stronger punch (optional).
+        if (useSpawnPunch)
+        {
+            seq.AppendInterval(0.01f);
+            seq.Append(target.DOPunchScale(punch, spawnPunchDuration, spawnPunchVibrato, spawnPunchElasticity));
+        }
+
+    }
+
+
+
+
+
+
+
+
 
     /// <summary>
     /// Removes all currently spawned blocks and clears lookup dictionaries.
@@ -218,6 +560,9 @@ public class WorldGridLoader : MonoBehaviour
         blocksById.Clear();
     }
 
+
+
+
     /// <summary>
     /// Tries to get a block by grid coordinate.
     /// </summary>
@@ -226,6 +571,10 @@ public class WorldGridLoader : MonoBehaviour
         return blocksByCoordinate.TryGetValue(coordinate, out block);
     }
 
+
+
+
+
     /// <summary>
     /// Tries to get a block by deterministic ID.
     /// </summary>
@@ -233,6 +582,10 @@ public class WorldGridLoader : MonoBehaviour
     {
         return blocksById.TryGetValue(blockId, out block);
     }
+
+
+
+
 
     /// <summary>
     /// Returns existing neighboring blocks in all 8 directions.
@@ -254,6 +607,10 @@ public class WorldGridLoader : MonoBehaviour
 
         return neighbors;
     }
+
+
+
+
 
     /// <summary>
     /// Destroys objects correctly in play mode and edit mode.

@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileDefinition
   projectilePrefab: {fileID: 2951250209424267304, guid: 61b1f3888d4874750b2798e232bd53f6, type: 3}
   prewarmCount: 16
-  speed: 80
+  speed: 90
   lifetimeSeconds: 4
   hitMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 31
   damage: 1
   destroyOnFirstHit: 1
   maxHitsBeforeDespawn: 1
   muzzleVfxPrefab: {fileID: 4462527361317752304, guid: ee7a76fbefe744ca7be48f8258bd2fb3, type: 3}
   hitVfxPrefab: {fileID: 1832820112507143047, guid: 8219cfbf2edcc46a48fe0a43e192b2e2, type: 3}
-  playerKnockbackOnFire: 10
+  playerKnockbackOnFire: 1
   applyShootShake: 1
   applyHitShake: 0
   fireSfxId: 2000
@@ -32,4 +32,4 @@ MonoBehaviour:
   damagePopupVfxPrefab: {fileID: 6193695181535097819, guid: 7d65d6cf347214ad495ae11c15d99bd8, type: 3}
   damagePopupOffset: {x: 0, y: 0, z: 0}
   parentDamagePopupToHitTarget: 0
-  spawnDamagePopupOnBlockedHit: 1
+  spawnDamagePopupOnBlockedHit: 0

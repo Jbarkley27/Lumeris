@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6696138879589975271}
   - component: {fileID: 1343355138803786901}
   - component: {fileID: 2951250209424267304}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Projectile_Basic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0

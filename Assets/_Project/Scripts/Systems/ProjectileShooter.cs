@@ -150,7 +150,8 @@ public class ProjectileShooter : MonoBehaviour
         }
 
         Quaternion rotation = Quaternion.LookRotation(fireDir, Vector3.up);
-        Instantiate(definition.muzzleVfxPrefab, origin, rotation);
+        GameObject vfx =Instantiate(definition.muzzleVfxPrefab, origin, rotation);
+        Destroy(vfx, 1.2f); // Cleanup after 2 seconds (tweak if needed)
     }
 
     private void ApplyFireFeedback(ProjectileDefinition definition)

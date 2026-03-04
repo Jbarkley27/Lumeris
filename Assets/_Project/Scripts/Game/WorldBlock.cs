@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using UnityEngine;
 
 /// <summary>
@@ -63,6 +64,16 @@ public class WorldBlock : MonoBehaviour
     public int GlassReward => glassReward;
     public bool IsSpecialConditionBlock => isSpecialConditionBlock;
 
+
+
+    [Header("Hit Punch")]
+    [Tooltip("Base punch percent relative to current scaled block size.")]
+    [SerializeField] private float hitPunchPercent = 0.22f;
+
+    [Tooltip("Random variance around base punch percent. 0.1 means +/-10%.")]
+    [SerializeField, Range(0f, 0.5f)] private float hitPunchRandomVariance = 0.1f;
+
+
     /// <summary>
     /// Initializes this block from layout/loader data.
     /// Call exactly once right after prefab instantiation.
@@ -122,8 +133,6 @@ public class WorldBlock : MonoBehaviour
         }
 
 
-
-
         currentHp = Mathf.Max(0, currentHp - damageAmount);
         ApplyScaleFromHp();
 
@@ -144,12 +153,25 @@ public class WorldBlock : MonoBehaviour
     /// </summary>
     private void ApplyScaleFromHp()
     {
-        float hpPercent = (float)currentHp / maxHp;
-        hpPercent = Mathf.Clamp01(hpPercent);
-
+        float hpPercent = Mathf.Clamp01((float)currentHp / maxHp);
         float scaleFactor = Mathf.Lerp(minVisualScale, 1f, hpPercent);
-        visualRoot.localScale = initialVisualScale * scaleFactor;
+
+        Vector3 baseScale = initialVisualScale * scaleFactor;
+
+
+        float randomizedMultiplier = 1f + UnityEngine.Random.Range(-hitPunchRandomVariance, hitPunchRandomVariance);
+        float randomizedPunchPercent = hitPunchPercent * randomizedMultiplier;
+        Vector3 punch = baseScale * randomizedPunchPercent;
+
+
+        // Prevent stacked tweens from fighting each other.
+        visualRoot.DOKill(false);
+
+        // Apply HP shrink first, then punch around that base.
+        visualRoot.localScale = baseScale;
+        visualRoot.DOPunchScale(punch, 0.14f, 8, 0.9f).SetEase(Ease.OutQuad);
     }
+
 
 
 
@@ -165,7 +187,7 @@ public class WorldBlock : MonoBehaviour
 
         IsDestroyed = true;
         Destroyed?.Invoke(this);
-        Destroy(gameObject);
+        Destroy(gameObject, .1f);
     }
 
 
@@ -184,45 +206,12 @@ public class WorldBlock : MonoBehaviour
     }
 
 
-
-
-
-    [ContextMenu("Debug Damage 1")]
-    private void DebugDamageOne()
-    {
-        ApplyDamage(1);
-    }
-
-
-
-    /// <summary>
-    /// Temporary editor-only helper to initialize this block for manual testing.
-    /// Remove this once WorldGridLoader initializes blocks at spawn time.
-    /// </summary>
-    [ContextMenu("Debug Init")]
-    private void DebugInit()
-    {
-        // Temporary deterministic debug identity.
-        Vector2Int debugCoordinate = new Vector2Int(0, 0);
-        string debugFloor = "debug_floor";
-        string debugId = $"{debugFloor}_{debugCoordinate.x}_{debugCoordinate.y}";
-        // canBeDestroyed = true;
-
-
-        // Initialize with safe defaults so HP scaling and destroy flow can be tested immediately.
-        Initialize(new WorldBlockInitData
-        {
-            blockId = debugId,
-            floorId = debugFloor,
-            gridCoordinate = debugCoordinate,
-            tier = BlockTier.Tier1,
-            maxHp = 5,
-            glassReward = 1,
-            isSpecialConditionBlock = false
-        });
-    }
-
 }
+
+
+
+
+
 
 /// <summary>
 /// Initialization payload used by world loader when spawning blocks.
