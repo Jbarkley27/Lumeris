@@ -119,9 +119,30 @@ public class WorldBlock : MonoBehaviour
 
         if (!isInitialized)
         {
-            Debug.LogWarning("WorldBlock.ApplyDamage called before Initialize.");
-            return false;
+            // Fallback for scene-saved/editor-preview blocks that were not spawned through loader.
+            // This keeps gameplay functional while still warning you that this block came from a non-runtime path.
+            if (visualRoot == null)
+            {
+                visualRoot = transform;
+            }
+
+            if (maxHp <= 0)
+            {
+                Debug.LogWarning($"WorldBlock '{name}' cannot auto-init because maxHp <= 0. It must be loader-initialized.");
+                return false;
+            }
+
+            if (currentHp <= 0 || currentHp > maxHp)
+            {
+                currentHp = maxHp;
+            }
+
+            initialVisualScale = visualRoot.localScale;
+            isInitialized = true;
+
+            Debug.LogWarning($"WorldBlock '{name}' auto-initialized from serialized scene values. Prefer runtime loader spawn.");
         }
+
 
         // Indestructible blocks still receive hit feedback,
         // but they never lose HP and never get destroyed.
@@ -165,11 +186,15 @@ public class WorldBlock : MonoBehaviour
 
 
         // Prevent stacked tweens from fighting each other.
-        visualRoot.DOKill(false);
 
         // Apply HP shrink first, then punch around that base.
+        visualRoot.DOKill(false);
         visualRoot.localScale = baseScale;
-        visualRoot.DOPunchScale(punch, 0.14f, 8, 0.9f).SetEase(Ease.OutQuad);
+        visualRoot
+            .DOPunchScale(punch, 0.14f, 8, 0.9f)
+            .SetEase(Ease.OutQuad)
+            .SetLink(visualRoot.gameObject, LinkBehaviour.KillOnDestroy);
+
     }
 
 
@@ -187,6 +212,11 @@ public class WorldBlock : MonoBehaviour
 
         IsDestroyed = true;
         Destroyed?.Invoke(this);
+        if (visualRoot != null)
+        {
+            visualRoot.DOKill(false);
+        }
+
         Destroy(gameObject, .1f);
     }
 
@@ -203,6 +233,21 @@ public class WorldBlock : MonoBehaviour
         }
 
         AudioManager.Instance.PlayOneShot(AudioSfxId.World_BlockHit_Indestructible);
+    }
+
+
+    /// <summary>
+    /// True when this block can take damage and be destroyed.
+    /// </summary>
+    public bool CanBeDestroyed => canBeDestroyed;
+
+
+    private void OnDisable()
+    {
+        if (visualRoot != null)
+        {
+            visualRoot.DOKill(false);
+        }
     }
 
 
@@ -229,5 +274,6 @@ public struct WorldBlockInitData
 
     // Loader passes per-cell destructibility into runtime block state.
     public bool canBeDestroyed;
+
 
 }

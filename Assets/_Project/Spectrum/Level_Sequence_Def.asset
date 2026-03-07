@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1773182736daf4322971502d01100732, type: 3}
+  m_Name: Level_Sequence_Def
+  m_EditorClassIdentifier: Assembly-CSharp::LevelSequenceDefinition
+  sequenceId: main_story
+  tiersPerColor: 5
+  levels:
+  - colorId: blue
+    tierInColor: 1
+    layout: {fileID: 11400000, guid: f11bb1416ee0949c5b85a1261f585b8d, type: 2}
+  - colorId: blue
+    tierInColor: 2
+    layout: {fileID: 11400000, guid: 50b896df3403a44528b600a29b9b7764, type: 2}
+  - colorId: blue
+    tierInColor: 3
+    layout: {fileID: 11400000, guid: 39e1d10ec4f3d462289d32a6529c96ab, type: 2}
+  - colorId: blue
+    tierInColor: 4
+    layout: {fileID: 11400000, guid: 6709f53d5162f4415b9c55270a7805bb, type: 2}
+  - colorId: blue
+    tierInColor: 5
+    layout: {fileID: 11400000, guid: 60295c093e9574803bcdbd453861c2c7, type: 2}
+  logValidationMessages: 1

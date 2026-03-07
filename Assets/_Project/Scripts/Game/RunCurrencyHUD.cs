@@ -5,41 +5,42 @@ using UnityEngine.UI;
 
 /// <summary>
 /// Runtime HUD for run currencies.
-/// Shows Glass/lifetime values, supports large-number formatting,
-/// and plays gain feedback animation on Glass increases.
+/// Rules:
+/// - Glass is always visible.
+/// - Fragments/Lumen roots are hidden until each has been earned at least once this run.
+/// - On Continue, if loaded value > 0 (or seen flags are true), roots show immediately.
 /// </summary>
 public class RunCurrencyHUD : MonoBehaviour
 {
-    [Header("UI References")]
-    [Tooltip("Text field for current Glass amount.")]
+    [Header("Currency Roots")]
+    [Tooltip("Glass UI root. Always shown.")]
+    [SerializeField] private GameObject glassRoot;
+
+    [Tooltip("Fragments UI root. Hidden until first fragment this run.")]
+    [SerializeField] private GameObject fragmentsRoot;
+
+    [Tooltip("Lumen UI root. Hidden until first lumen this run.")]
+    [SerializeField] private GameObject lumenRoot;
+
+    [Header("Text References")]
     [SerializeField] private TMP_Text glassText;
+    [SerializeField] private TMP_Text fragmentsText;
+    [SerializeField] private TMP_Text lumenText;
 
-    [Tooltip("Text field for lifetime Glass earned amount.")]
-    [SerializeField] private TMP_Text lifetimeGlassText;
-
-    [Tooltip("Optional icon image shown next to Glass text.")]
+    [Header("Optional Glass Icon")]
     [SerializeField] private Image glassIconImage;
-
-    [Tooltip("Optional sprite assigned to the Glass icon image at startup.")]
     [SerializeField] private Sprite glassIconSprite;
 
-    [Tooltip("Transform to animate when Glass is gained. If null, glassText transform is used.")]
+    [Header("Glass Gain Animation")]
+    [Tooltip("Transform to punch when Glass increases. Defaults to glassText transform.")]
     [SerializeField] private Transform glassPunchTarget;
 
-    [Header("Gain Animation")]
-    [Tooltip("Scale delta used by DOPunchScale on Glass gain.")]
     [SerializeField] private float gainPunchStrength = 0.18f;
-
-    [Tooltip("Punch duration in seconds.")]
     [SerializeField] private float gainPunchDuration = 0.16f;
-
-    [Tooltip("Punch vibrato count.")]
     [SerializeField] private int gainPunchVibrato = 8;
-
-    [Tooltip("Punch elasticity value.")]
     [SerializeField] private float gainPunchElasticity = 0.9f;
 
-    [Header("Text Labels")]
+    [Header("Display")]
     [SerializeField] private string missingValueText = "--";
 
     [Header("Runtime Wiring")]
@@ -49,20 +50,33 @@ public class RunCurrencyHUD : MonoBehaviour
     [SerializeField] private GameSettings gameSettings;
     [SerializeField] private bool autoFindGameSettings = true;
 
-    // Tracks last value to detect positive gain and trigger punch.
-    private double lastKnownGlass;
+    // Used to trigger punch only on positive Glass change.
     private bool hasSeenFirstGlassValue;
+    private double lastKnownGlass;
+
+    [Header("Passive Generation Sliders")]
+    [Tooltip("Optional slider showing progress to next Fragments passive tick.")]
+    [SerializeField] private Slider fragmentsGenerationSlider;
+
+    [Tooltip("Optional slider showing progress to next Lumen passive tick.")]
+    [SerializeField] private Slider lumenGenerationSlider;
+
 
     private void Awake()
     {
         ResolveManagerReference();
         ResolveSettingsReference();
         ApplyIconSetup();
+        ConfigureSliderDefaults();
     }
 
     private void OnEnable()
     {
-        RunCurrencyManager.GlassChanged += OnGlassChanged;
+        // Unified currency update event (new system).
+        RunCurrencyManager.CurrencyStateChanged += OnCurrencyStateChanged;
+
+        // Keep legacy compatibility in case some flows still emit this only.
+        RunCurrencyManager.GlassChanged += OnGlassChangedLegacy;
 
         if (gameSettings != null)
         {
@@ -74,7 +88,8 @@ public class RunCurrencyHUD : MonoBehaviour
 
     private void OnDisable()
     {
-        RunCurrencyManager.GlassChanged -= OnGlassChanged;
+        RunCurrencyManager.CurrencyStateChanged -= OnCurrencyStateChanged;
+        RunCurrencyManager.GlassChanged -= OnGlassChangedLegacy;
 
         if (gameSettings != null)
         {
@@ -84,6 +99,7 @@ public class RunCurrencyHUD : MonoBehaviour
 
     private void Update()
     {
+        // Late auto-wire if manager is spawned after HUD.
         if (runCurrencyManager == null && autoFindRunCurrencyManager)
         {
             ResolveManagerReference();
@@ -94,6 +110,7 @@ public class RunCurrencyHUD : MonoBehaviour
             }
         }
 
+        // Late auto-wire if settings is spawned after HUD.
         if (gameSettings == null && autoFindGameSettings)
         {
             ResolveSettingsReference();
@@ -104,32 +121,35 @@ public class RunCurrencyHUD : MonoBehaviour
                 RefreshFromManager();
             }
         }
+
+        UpdatePassiveSliders();
+
     }
 
     /// <summary>
-    /// Re-render values when number format settings change at runtime.
+    /// Public helper for external forced refresh (optional debug usage).
     /// </summary>
-    private void OnNumberFormatSettingsChanged()
+    public void ForceRefresh()
+    {
+        RefreshFromManager();
+    }
+
+    private void OnCurrencyStateChanged()
     {
         RefreshFromManager();
     }
 
     /// <summary>
-    /// Event callback when Glass changes.
+    /// Legacy callback. We still refresh full HUD from manager state.
     /// </summary>
-    private void OnGlassChanged(double currentGlass, double lifetimeGlassEarned)
+    private void OnGlassChangedLegacy(double currentGlass, double lifetimeGlass)
     {
-        bool shouldPunch = hasSeenFirstGlassValue && currentGlass > lastKnownGlass;
+        RefreshFromManager();
+    }
 
-        SetHudValues(currentGlass, lifetimeGlassEarned);
-
-        lastKnownGlass = currentGlass;
-        hasSeenFirstGlassValue = true;
-
-        if (shouldPunch)
-        {
-            PlayGlassGainPunch();
-        }
+    private void OnNumberFormatSettingsChanged()
+    {
+        RefreshFromManager();
     }
 
     private void RefreshFromManager()
@@ -140,53 +160,81 @@ public class RunCurrencyHUD : MonoBehaviour
             return;
         }
 
-        double current = runCurrencyManager.CurrentGlass;
-        double lifetime = runCurrencyManager.LifetimeGlassEarned;
+        double glass = runCurrencyManager.CurrentGlass;
+        double fragments = runCurrencyManager.CurrentFragments;
+        double lumen = runCurrencyManager.CurrentLumen;
 
-        SetHudValues(current, lifetime);
+        // Detect positive glass delta for punch feedback.
+        bool shouldPunch = hasSeenFirstGlassValue && glass > lastKnownGlass;
 
-        lastKnownGlass = current;
+        // Format strings from current runtime settings every refresh.
+        string glassFormatted = FormatValue(glass);
+        string fragmentsFormatted = FormatValue(fragments);
+        string lumenFormatted = FormatValue(lumen);
+
+        if (glassText != null) glassText.text = glassFormatted;
+        if (fragmentsText != null) fragmentsText.text = fragmentsFormatted;
+        if (lumenText != null) lumenText.text = lumenFormatted;
+
+        // Visibility rules:
+        // - Glass always visible.
+        // - Other currencies visible only after first earn this run
+        //   (or loaded > 0 on Continue path).
+        SetRootActive(glassRoot, true);
+        SetRootActive(fragmentsRoot, runCurrencyManager.HasSeenFragmentsThisRun || fragments > 0d);
+        SetRootActive(lumenRoot, runCurrencyManager.HasSeenLumenThisRun || lumen > 0d);
+
+        lastKnownGlass = glass;
         hasSeenFirstGlassValue = true;
+
+        if (shouldPunch)
+        {
+            PlayGlassGainPunch();
+        }
     }
 
-    /// <summary>
-    /// Updates text with current formatter settings.
-    /// </summary>
-    private void SetHudValues(double currentGlass, double lifetimeGlassEarned)
+    private string FormatValue(double value)
     {
-        string currentFormatted = NumberFormatter.Format(currentGlass, gameSettings);
-        string lifetimeFormatted = NumberFormatter.Format(lifetimeGlassEarned, gameSettings);
-
-        if (glassText != null)
+        if (gameSettings == null)
         {
-            glassText.text = currentFormatted;
+            // Fallback when settings manager is missing.
+            return value.ToString("0.###");
         }
 
-        if (lifetimeGlassText != null)
-        {
-            lifetimeGlassText.text = lifetimeFormatted;
-        }
+        return NumberFormatter.Format(value, gameSettings);
     }
-
 
     private void SetMissingState()
     {
-        if (glassText != null)
+        if (glassText != null) glassText.text = missingValueText;
+        if (fragmentsText != null) fragmentsText.text = missingValueText;
+        if (lumenText != null) lumenText.text = missingValueText;
+
+        // Keep glass root visible per design rule.
+        SetRootActive(glassRoot, true);
+        SetRootActive(fragmentsRoot, false);
+        SetRootActive(lumenRoot, false);
+
+        hasSeenFirstGlassValue = false;
+        lastKnownGlass = 0d;
+
+        SetSliderValue(fragmentsGenerationSlider, 0f);
+        SetSliderValue(lumenGenerationSlider, 0f);
+    }
+
+    private void SetRootActive(GameObject root, bool active)
+    {
+        if (root == null)
         {
-            glassText.text = missingValueText;
+            return;
         }
 
-        if (lifetimeGlassText != null)
+        if (root.activeSelf != active)
         {
-            lifetimeGlassText.text = missingValueText;
+            root.SetActive(active);
         }
     }
 
-
-    /// <summary>
-    /// Punch feedback for Glass gain.
-    /// Kills previous tweens first to avoid stacking during rapid gains.
-    /// </summary>
     private void PlayGlassGainPunch()
     {
         Transform target = glassPunchTarget != null ? glassPunchTarget : (glassText != null ? glassText.transform : null);
@@ -195,7 +243,7 @@ public class RunCurrencyHUD : MonoBehaviour
             return;
         }
 
-        // Prevent tween buildup when gains happen rapidly.
+        // Kill previous tween before creating a new one to prevent stack buildup.
         target.DOKill(false);
         target.localScale = Vector3.one;
 
@@ -206,9 +254,6 @@ public class RunCurrencyHUD : MonoBehaviour
             gainPunchElasticity);
     }
 
-    /// <summary>
-    /// Applies optional icon sprite setup.
-    /// </summary>
     private void ApplyIconSetup()
     {
         if (glassIconImage == null)
@@ -242,4 +287,63 @@ public class RunCurrencyHUD : MonoBehaviour
 
         gameSettings = FindFirstObjectByType<GameSettings>();
     }
+
+
+    /// <summary>
+    /// Ensures optional sliders use normalized 0..1 range.
+    /// </summary>
+    private void ConfigureSliderDefaults()
+    {
+        ConfigureSlider01(fragmentsGenerationSlider);
+        ConfigureSlider01(lumenGenerationSlider);
+    }
+
+    private void ConfigureSlider01(Slider slider)
+    {
+        if (slider == null)
+        {
+            return;
+        }
+
+        slider.minValue = 0f;
+        slider.maxValue = 1f;
+    }
+
+    /// <summary>
+    /// Updates passive-generation sliders each frame for smooth fill motion.
+    /// Uses one shared tick progress source from RunCurrencyManager.
+    /// Hidden currencies keep slider at 0 to avoid visual noise.
+    /// </summary>
+    private void UpdatePassiveSliders()
+    {
+        if (runCurrencyManager == null)
+        {
+            SetSliderValue(fragmentsGenerationSlider, 0f);
+            SetSliderValue(lumenGenerationSlider, 0f);
+            return;
+        }
+
+        bool showFragments = runCurrencyManager.HasSeenFragmentsThisRun || runCurrencyManager.CurrentFragments > 0d;
+        bool showLumen = runCurrencyManager.HasSeenLumenThisRun || runCurrencyManager.CurrentLumen > 0d;
+
+        float fragmentsProgress = runCurrencyManager.FragmentsProgressToNextWhole01;
+        float lumenProgress = runCurrencyManager.LumenProgressToNextWhole01;
+
+
+        SetSliderValue(fragmentsGenerationSlider, showFragments ? fragmentsProgress : 0f);
+        SetSliderValue(lumenGenerationSlider, showLumen ? lumenProgress : 0f);
+    }
+
+
+
+    private void SetSliderValue(Slider slider, float value)
+    {
+        if (slider == null)
+        {
+            return;
+        }
+
+        slider.value = Mathf.Clamp01(value);
+    }
+
 }

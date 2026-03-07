@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System;
+
 
 
 /// <summary>
@@ -161,8 +163,40 @@ public class WorldGridLoader : MonoBehaviour
     [Range(0f, 1f)] [SerializeField] private float spawnPunchElasticity = 0.9f;
 
 
+    /// <summary>
+    /// Fired after a world layout finishes loading and spawning.
+    /// </summary>
+    public event Action<WorldLayout2D> WorldLoaded;
+
+    /// <summary>
+    /// Last loaded layout reference for external systems.
+    /// </summary>
+    public WorldLayout2D CurrentLoadedLayout => lastLoadedLayout;
 
 
+
+
+
+    /// <summary>
+    /// Forces loader to use a specific layout and load it immediately.
+    /// Used by sequence progression manager.
+    /// </summary>
+    public void LoadSpecificLayout(WorldLayout2D specificLayout)
+    {
+        if (specificLayout == null)
+        {
+            Debug.LogError("WorldGridLoader.LoadSpecificLayout failed: specificLayout is null.");
+            return;
+        }
+
+        // Use supplied layout as current source.
+        layout = specificLayout;
+
+        // Disable debug override for explicit sequence loads.
+        useDebugLayoutOverride = false;
+
+        LoadWorld();
+    }
 
 
 
@@ -459,7 +493,7 @@ public class WorldGridLoader : MonoBehaviour
         }
 
 
-        
+        WorldLoaded?.Invoke(activeLayout);
     }
 
 
@@ -531,6 +565,10 @@ public class WorldGridLoader : MonoBehaviour
             seq.Append(target.DOPunchScale(punch, spawnPunchDuration, spawnPunchVibrato, spawnPunchElasticity));
         }
 
+        seq = DOTween.Sequence()
+             .SetLink(target.gameObject, LinkBehaviour.KillOnDestroy);
+
+
     }
 
 
@@ -552,6 +590,7 @@ public class WorldGridLoader : MonoBehaviour
             for (int i = blocksParent.childCount - 1; i >= 0; i--)
             {
                 Transform child = blocksParent.GetChild(i);
+                child.DOKill(false);
                 SafeDestroy(child.gameObject);
             }
         }
