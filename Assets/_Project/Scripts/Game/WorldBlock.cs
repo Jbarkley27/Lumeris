@@ -73,6 +73,15 @@ public class WorldBlock : MonoBehaviour
     [Tooltip("Random variance around base punch percent. 0.1 means +/-10%.")]
     [SerializeField, Range(0f, 0.5f)] private float hitPunchRandomVariance = 0.1f;
 
+    /// <summary>
+    /// Raised for every valid block hit attempt coming through ApplyDamage.
+    /// - blocked = true  => hit an indestructible block (no HP loss)
+    /// - blocked = false => hit a destructible block (HP was reduced)
+    /// This is used by global feedback systems (damage number spawner, etc.).
+    /// </summary>
+    public static event Action<WorldBlock, int, Vector3, bool> DamagePopupRequested;
+
+
 
     /// <summary>
     /// Initializes this block from layout/loader data.
@@ -105,6 +114,24 @@ public class WorldBlock : MonoBehaviour
         initialVisualScale = visualRoot.localScale;
         ApplyScaleFromHp();
     }
+
+
+
+
+
+    /// <summary>
+    /// Emits a unified popup request so popup logic stays outside this class.
+    /// </summary>
+    private void RaiseDamagePopupRequest(int incomingDamage, bool blocked)
+    {
+        // Use visual root as anchor when available so popup appears near visible mesh.
+        Vector3 anchor = (visualRoot != null ? visualRoot.position : transform.position) + Vector3.up * 0.35f;
+        DamagePopupRequested?.Invoke(this, Mathf.Max(0, incomingDamage), anchor, blocked);
+    }
+
+
+
+
 
     /// <summary>
     /// Applies damage to this block.
@@ -148,6 +175,7 @@ public class WorldBlock : MonoBehaviour
         // but they never lose HP and never get destroyed.
         if (!canBeDestroyed)
         {
+            RaiseDamagePopupRequest(damageAmount, true);
             PlayIndestructibleHitFeedback();
             HitIndestructible?.Invoke(this);
             return false;
@@ -156,6 +184,7 @@ public class WorldBlock : MonoBehaviour
 
         currentHp = Mathf.Max(0, currentHp - damageAmount);
         ApplyScaleFromHp();
+        RaiseDamagePopupRequest(damageAmount, false);
 
         if (currentHp == 0)
         {
