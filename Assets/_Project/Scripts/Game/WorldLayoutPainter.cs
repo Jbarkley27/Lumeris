@@ -9,7 +9,7 @@ public class WorldLayoutPainter : MonoBehaviour
     [System.Serializable]
     public class BrushSettings
     {
-        [Tooltip("Tier assigned to painted non-special cells.")]
+        [Tooltip("Tier assigned to painted non-special cells (drives runtime stats and layout tier-material selection).")]
         public BlockTier tier = BlockTier.Tier1;
 
         [Tooltip("If true, painted cells become special blocks.")]
@@ -257,7 +257,8 @@ public class WorldLayoutPainter : MonoBehaviour
 
     /// <summary>
     /// Creates a starter preset palette for fast authoring.
-    /// Presets now define structure only (tier/special/destructibility).
+    /// Presets define structure only (tier/special/destructibility).
+    /// For non-special cells, tier also selects material via the layout's tier-material mapping.
     /// Runtime HP/reward come from balance config.
     /// </summary>
     [ContextMenu("Create Default Brush Presets")]

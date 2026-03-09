@@ -422,7 +422,7 @@ public class WorldGridLoader : MonoBehaviour
                 }
 
 
-                // Prefab selection remains layout-owned (tier mapping + special mapping).
+                // Prefab selection remains layout-owned (single normal prefab + special mapping).
                 GameObject prefabToSpawn = activeLayout.ResolvePrefabForCell(cell);
 
                 if (prefabToSpawn == null)
@@ -445,6 +445,13 @@ public class WorldGridLoader : MonoBehaviour
                     Debug.LogError($"WorldGridLoader: Prefab '{prefabToSpawn.name}' is missing WorldBlock. Destroying spawned instance.");
                     SafeDestroy(spawnedObject);
                     continue;
+                }
+
+                // Normal blocks share one prefab and get tier-specific material from layout mapping.
+                if (!cell.isSpecialConditionBlock)
+                {
+                    Material tierMaterial = activeLayout.ResolveNormalBlockMaterial(cell.tier);
+                    block.ApplyTierMaterial(tierMaterial);
                 }
 
                 Vector2Int coordinate = new Vector2Int(x, y);
@@ -551,22 +558,28 @@ public class WorldGridLoader : MonoBehaviour
         Sequence seq = DOTween.Sequence();
         seq.SetDelay(delay);
 
-        float baseScale = Mathf.Max(fullScale.x, Mathf.Max(fullScale.y, fullScale.z));
-        float punchMagnitude = Mathf.Max(0.05f, baseScale * spawnPunchStrength);
-        Vector3 punch = Vector3.one * punchMagnitude;
-
         // Step 1: scale in.
         seq.Append(target.DOScale(fullScale, spawnTweenDuration).SetEase(spawnTweenEase));
 
-        // Step 2: stronger punch (optional).
+        // Step 2: optional overshoot bounce.
+        // Use a deterministic non-negative scale tween instead of punch to avoid collider warnings
+        // from transient negative effective scale on BoxCollider objects.
         if (useSpawnPunch)
         {
             seq.AppendInterval(0.01f);
-            seq.Append(target.DOPunchScale(punch, spawnPunchDuration, spawnPunchVibrato, spawnPunchElasticity));
+
+            float vibratoFactor = Mathf.Clamp(spawnPunchVibrato / 8f, 0.35f, 2f);
+            float elasticityFactor = Mathf.Lerp(0.5f, 1f, spawnPunchElasticity);
+            float overshootPercent = Mathf.Clamp01(spawnPunchStrength * 0.12f * vibratoFactor * elasticityFactor);
+            Vector3 overshootScale = fullScale * (1f + overshootPercent);
+            float upDuration = Mathf.Max(0.01f, spawnPunchDuration * 0.45f);
+            float downDuration = Mathf.Max(0.01f, spawnPunchDuration * 0.55f);
+
+            seq.Append(target.DOScale(overshootScale, upDuration).SetEase(Ease.OutQuad));
+            seq.Append(target.DOScale(fullScale, downDuration).SetEase(Ease.InOutSine));
         }
 
-        seq = DOTween.Sequence()
-             .SetLink(target.gameObject, LinkBehaviour.KillOnDestroy);
+        seq.SetLink(target.gameObject, LinkBehaviour.KillOnDestroy);
 
 
     }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1749040854750540497
+--- !u!1 &6512538129946581902
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2586899288103916957}
-  - component: {fileID: 7452663628033037203}
-  - component: {fileID: 7244868886858467631}
-  - component: {fileID: 1434696733630428790}
-  - component: {fileID: 4846838188187694865}
+  - component: {fileID: 6240092805782098402}
+  - component: {fileID: 4420710209975456717}
+  - component: {fileID: 331155338227339958}
+  - component: {fileID: 9011459011252506542}
+  - component: {fileID: 1867582272336464839}
+  - component: {fileID: 312594500293659513}
   m_Layer: 0
-  m_Name: Blue_03
+  m_Name: Basic_Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2586899288103916957
+--- !u!4 &6240092805782098402
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1749040854750540497}
+  m_GameObject: {fileID: 6512538129946581902}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7452663628033037203
+--- !u!33 &4420710209975456717
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1749040854750540497}
+  m_GameObject: {fileID: 6512538129946581902}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7244868886858467631
+--- !u!23 &331155338227339958
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1749040854750540497}
+  m_GameObject: {fileID: 6512538129946581902}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -68,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 42774459ab678487092aee0a823514a6, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,13 +92,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1434696733630428790
+--- !u!65 &9011459011252506542
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1749040854750540497}
+  m_GameObject: {fileID: 6512538129946581902}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -112,13 +113,13 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4846838188187694865
+--- !u!114 &1867582272336464839
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1749040854750540497}
+  m_GameObject: {fileID: 6512538129946581902}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8661c58b534624413aac3753e62ecd36, type: 3}
@@ -128,10 +129,29 @@ MonoBehaviour:
   floorId: debug_floor
   gridCoordinate: {x: 0, y: 0}
   tier: 1
-  maxHp: 5
+  maxHp: 20
   currentHp: 5
-  glassReward: 1
+  glassReward: 5
   isSpecialConditionBlock: 0
   canBeDestroyed: 1
-  visualRoot: {fileID: 2586899288103916957}
+  visualRoot: {fileID: 6240092805782098402}
   minVisualScale: 0.35
+  tierMaterialRenderers: []
+  hitPunchPercent: 0.22
+  hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
+--- !u!114 &312594500293659513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6512538129946581902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98277aaf2de6f4f4bbbd98ddc10af9e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HitFlashModule
+  flashData:
+    flashColor: {fileID: 2100000, guid: f4067b0b44d8f443e80e46239ac0b553, type: 2}
+    flashDuration: 0.08

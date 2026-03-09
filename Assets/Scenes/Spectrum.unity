@@ -211,6 +211,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &8572307
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -348,6 +349,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &11122763
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -485,6 +487,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &15147064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -622,6 +625,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &16255152
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -759,6 +763,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &16960195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -896,6 +901,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &19662620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1033,6 +1039,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &20448771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1170,6 +1177,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &20555717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1307,6 +1315,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &24063195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1444,6 +1453,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &25424772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1581,6 +1591,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &27651130
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1718,6 +1729,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &28681923
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1931,6 +1943,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &29880029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2068,6 +2081,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &33161341
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2205,6 +2219,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &35591741
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2342,6 +2357,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &35742483
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2479,6 +2495,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &35825589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2616,6 +2633,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &43111058
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2753,6 +2771,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &49089361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2890,6 +2909,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &49839086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3027,6 +3047,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &51060385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3164,6 +3185,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &51478291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3301,6 +3323,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &55698429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3549,6 +3572,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &71436319
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3686,6 +3710,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &73218834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3823,6 +3848,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &75507213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3960,6 +3986,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &86422149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4097,6 +4124,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &87643155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4234,6 +4262,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &88100088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4371,6 +4400,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &91203058
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4508,6 +4538,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &91824872
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4681,6 +4712,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &93249232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4818,6 +4850,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &98573860
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5030,6 +5063,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &103060075
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5167,6 +5201,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &105372353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5304,6 +5339,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &106733700
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5441,6 +5477,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &107584100
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5578,6 +5615,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &107744333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5715,6 +5753,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &110053266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5852,6 +5891,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &113465775
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5989,6 +6029,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &119494221
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6126,6 +6167,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &122879191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6263,6 +6305,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &131607132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6400,6 +6443,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &131616213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6537,6 +6581,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &136426292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6674,6 +6719,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &136568529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6811,6 +6857,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &138914593
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6948,6 +6995,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &139768479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7085,6 +7133,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &142462515
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7222,6 +7271,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &143296934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7359,6 +7409,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &145445817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7496,6 +7547,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &145847840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7633,6 +7685,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &149163757
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7770,6 +7823,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &151424773
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7982,6 +8036,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &152322226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8119,6 +8174,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &153776603
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8292,6 +8348,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &156932901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8429,6 +8486,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &158269290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8566,6 +8624,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &162978623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8703,6 +8762,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &164143634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8840,6 +8900,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &164249352
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8977,6 +9038,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &165210942
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9114,6 +9176,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &165844354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9251,6 +9314,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &170202510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9388,6 +9452,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &177019124
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9525,6 +9590,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &178165015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9662,6 +9728,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &178186234
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9799,6 +9866,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &182837395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10011,6 +10079,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &184161209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10148,6 +10217,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &189623325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10285,6 +10355,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &195755065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10512,6 +10583,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &197979707
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10649,6 +10721,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &198880220
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11025,6 +11098,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &203998066
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11162,6 +11236,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &204525599
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11299,6 +11374,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &209553527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11436,6 +11512,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &209958879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11573,6 +11650,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &210109221
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11710,6 +11788,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &210660027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11847,6 +11926,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &211781288
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11984,6 +12064,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &212306201
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12121,6 +12202,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &213229621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12258,6 +12340,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &215982876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12395,6 +12478,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &221957026
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12532,6 +12616,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &222079387
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12669,6 +12754,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &225275235
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12806,6 +12892,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &228364829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12943,6 +13030,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &231161470
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13080,6 +13168,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &235653687
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13217,6 +13306,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &239412048
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13354,6 +13444,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &240358966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13491,6 +13582,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &240814996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13628,6 +13720,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &245851256
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13765,6 +13858,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &249089746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13842,184 +13936,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249089743}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!43 &249892909
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: TextMeshPro Mesh(Clone)
-  serializedVersion: 12
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 24
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 16
-    localAABB:
-      m_Center: {x: -0.031199843, y: 0.030998774, z: 0}
-      m_Extent: {x: 0.7417067, y: 0.23344353, z: 0}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 000001000200020003000000040005000600060007000400080009000a000a000b0008000c000d000e000e000f000c00
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 16
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 40
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 56
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 72
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 1280
-    _typelessdata: 35dd45bfad4d4fbe000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f3333e33b66c6643f00000000d9891d3d000000000000000035dd45bffb64873e000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f3333e33b9a397d3f00000000d9891d3d000000000000803fd45f9abefb64873e000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803fcdccd13d9a397d3f00000000d9891d3d0000803f0000803fd45f9abead4d4fbe000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803fcdccd13d66c6643f00000000d9891d3d0000803f00000000b8a688bead4d4fbe000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f3333e33b66c6103f00000000d9891d3d0000000000000000b8a688befb64873e000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f3333e33b9a39293f00000000d9891d3d000000000000803fbc67513efb64873e000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803fcdccd13d9a39293f00000000d9891d3d0000803f0000803fbc67513ead4d4fbe000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803fcdccd13d66c6103f00000000d9891d3d0000803f00000000f4d9743ead4d4fbe000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f3333e33b66c6103f00000000d9891d3d0000000000000000f4d9743efb64873e000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f3333e33b9a39293f00000000d9891d3d000000000000803fc8e3353ffb64873e000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803fcdccd13d9a39293f00000000d9891d3d0000803f0000803fc8e3353fad4d4fbe000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803fcdccd13d66c6103f00000000d9891d3d0000803f000000000000000000000000000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f000000000000000000000000000000000000000000000000
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: -0.031199843, y: 0.030998774, z: 0}
-    m_Extent: {x: 0.7417067, y: 0.23344353, z: 0}
-  m_MeshUsageFlags: 0
-  m_CookingOptions: 30
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  'm_MeshMetrics[0]': 1
-  'm_MeshMetrics[1]': 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
-  m_MeshLodInfo:
-    serializedVersion: 2
-    m_LodSelectionCurve:
-      serializedVersion: 1
-      m_LodSlope: 0
-      m_LodBias: 0
-    m_NumLevels: 1
-    m_SubMeshes:
-    - serializedVersion: 2
-      m_Levels:
-      - serializedVersion: 1
-        m_IndexStart: 0
-        m_IndexCount: 0
 --- !u!1 &250052639
 GameObject:
   m_ObjectHideFlags: 0
@@ -14080,6 +13996,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &250052642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14217,6 +14134,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &250507831
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14354,6 +14272,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &262399036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14491,6 +14410,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &265170142
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14628,6 +14548,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &267254124
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14765,6 +14686,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &270104675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14902,6 +14824,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &271545450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15039,6 +14962,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &275304773
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15176,6 +15100,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &277467661
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15313,6 +15238,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &277611865
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15450,6 +15376,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &279248174
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15587,6 +15514,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &284412311
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15759,6 +15687,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &289232568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15896,6 +15825,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &290528337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16033,6 +15963,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &290734371
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16170,6 +16101,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &292978896
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16307,6 +16239,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &294400426
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16444,6 +16377,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &294783871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16581,6 +16515,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &298801497
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16718,6 +16653,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &298819272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16855,6 +16791,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &299022791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16992,6 +16929,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &302745667
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17129,6 +17067,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &303814753
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17266,6 +17205,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &304978088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17403,6 +17343,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &307868614
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17540,6 +17481,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &312820168
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17677,6 +17619,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &313073453
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17814,6 +17757,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &314049779
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17951,6 +17895,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &318044556
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18088,6 +18033,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &320340734
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18225,6 +18171,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &320445728
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18362,6 +18309,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &321425025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18499,6 +18447,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &321964697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18711,6 +18660,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &324990376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18848,6 +18798,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &325498151
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19264,6 +19215,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &333305313
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19401,6 +19353,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &335179472
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20363,6 +20316,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &339139086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20500,6 +20454,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &340601681
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20637,6 +20592,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &349235723
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20774,6 +20730,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &353398015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20911,6 +20868,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &354972839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21123,6 +21081,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &358258847
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21260,6 +21219,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &358850015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21397,6 +21357,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &363725440
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21534,6 +21495,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &365468716
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21671,6 +21633,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &369872290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21808,6 +21771,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &369894002
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21945,6 +21909,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &372099493
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22082,6 +22047,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &374686417
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22219,6 +22185,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &385985118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22356,6 +22323,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &388296836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22493,6 +22461,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &390172246
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22630,6 +22599,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &390881136
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22767,6 +22737,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &393014378
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22904,6 +22875,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &395477902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23041,6 +23013,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &395850743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23178,6 +23151,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &398260996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23315,6 +23289,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &398367943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23452,6 +23427,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &401073019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23589,6 +23565,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &406725435
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23853,6 +23830,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &410838542
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23990,6 +23968,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &413249334
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24127,6 +24106,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &413661723
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24264,6 +24244,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &414875074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24401,6 +24382,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &415970359
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24538,6 +24520,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &416899185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24675,6 +24658,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &423375740
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24812,6 +24796,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &426030283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24949,6 +24934,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &432570755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25086,6 +25072,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &433248147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25223,6 +25210,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &437469954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25360,6 +25348,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &437645386
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25497,6 +25486,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &443522396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25737,6 +25727,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &446892071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25874,6 +25865,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &447760061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26011,6 +26003,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &449404473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26148,6 +26141,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &451507312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26285,6 +26279,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &451919066
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26422,6 +26417,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &452661485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26695,6 +26691,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &454536812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26832,6 +26829,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &457799249
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26969,6 +26967,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &460252486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27106,6 +27105,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &461031354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27243,6 +27243,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &469807604
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27380,6 +27381,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &472721808
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27553,6 +27555,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &473852062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27690,6 +27693,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &478521445
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27827,6 +27831,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &478789525
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27964,6 +27969,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &482666971
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28101,6 +28107,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &486286932
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28238,6 +28245,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &486749983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28375,6 +28383,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &491034445
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28512,6 +28521,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &494460850
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28649,6 +28659,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &500667993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28786,6 +28797,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &501309916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28923,6 +28935,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &503319225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29060,6 +29073,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &508244496
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29272,6 +29286,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &513277715
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29409,6 +29424,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &515457587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29546,6 +29562,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &519925557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29758,6 +29775,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &521794294
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29895,6 +29913,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &522452827
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30032,6 +30051,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &523655286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30169,6 +30189,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &524368710
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30306,6 +30327,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &525013942
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30443,6 +30465,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &526477732
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30580,6 +30603,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &532697251
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30717,6 +30741,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &540652169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30854,6 +30879,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &540746352
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30991,6 +31017,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &541516063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31128,6 +31155,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &542638676
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31265,6 +31293,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &548065623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31402,6 +31431,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &553039266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31539,6 +31569,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &554538717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31676,6 +31707,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &554766315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31813,6 +31845,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &560367021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31950,6 +31983,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &561986915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32087,6 +32121,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &562212341
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32224,6 +32259,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &562653279
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32361,6 +32397,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &563746126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32498,6 +32535,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &564735766
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32635,6 +32673,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &566713959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32847,6 +32886,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &572646650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32984,6 +33024,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &573807069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33121,6 +33162,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &580179746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33258,6 +33300,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &582534463
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33470,6 +33513,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &594291239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33607,6 +33651,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &595739506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33744,6 +33789,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &595812947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33881,6 +33927,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &597729147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34085,6 +34132,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &605008937
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34222,6 +34270,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &605095181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34495,6 +34544,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &607889818
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34632,6 +34682,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &608098887
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34769,6 +34820,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &608191532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34906,6 +34958,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &609849032
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35043,6 +35096,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &611135078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35180,6 +35234,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &611631813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35317,6 +35372,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &618693961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35529,6 +35585,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &621843766
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35666,6 +35723,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &625046045
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35914,6 +35972,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &627219489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36051,6 +36110,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &630173677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36188,6 +36248,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &630708706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36400,6 +36461,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &638692400
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36537,6 +36599,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &641740036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36674,6 +36737,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &644969821
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36811,6 +36875,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &646793199
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36948,6 +37013,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &647001289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37085,6 +37151,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &647146550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37222,6 +37289,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &650493783
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37359,6 +37427,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &652567069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37496,6 +37565,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &652837690
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37633,6 +37703,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &662125129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37770,6 +37841,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &666404819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37907,6 +37979,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &671511165
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38191,6 +38264,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &674415578
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38328,6 +38402,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &678100839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38465,6 +38540,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &682222575
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38602,6 +38678,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &684621713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38910,6 +38987,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &695221765
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39047,6 +39125,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &695529376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39184,6 +39263,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &698808537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39321,6 +39401,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &700406406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39458,6 +39539,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &702440803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39595,6 +39677,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &707152632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39732,6 +39815,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &708702991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39869,6 +39953,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &708931104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40006,6 +40091,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &710012868
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40143,6 +40229,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &719122395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40280,6 +40367,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &721039674
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40417,6 +40505,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &726150743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40554,6 +40643,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &728068072
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40691,6 +40781,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &732848226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40828,6 +40919,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &739001922
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41000,6 +41092,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &741257101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41137,6 +41230,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &741302320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41274,6 +41368,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &745673796
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41625,6 +41720,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &750679897
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41762,6 +41858,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &753610889
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41899,6 +41996,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &753920623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42036,6 +42134,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &754355706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42173,6 +42272,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &755824449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42310,6 +42410,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &756892512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42447,6 +42548,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &758504112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42584,6 +42686,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &760025248
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42721,6 +42824,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &760781000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42858,6 +42962,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &764985472
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42995,6 +43100,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &768112147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43132,6 +43238,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &768563178
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43269,6 +43376,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &769289635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43406,6 +43514,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &769720270
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43543,6 +43652,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &770251714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43680,6 +43790,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &772649078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43817,6 +43928,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &776743811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43954,6 +44066,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &777443071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44127,6 +44240,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &779100688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44264,6 +44378,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &782507937
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44401,6 +44516,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &783880635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44538,6 +44654,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &786490895
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44675,6 +44792,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &789944903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44812,6 +44930,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &798749266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45021,6 +45140,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &802345920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45158,6 +45278,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &803252526
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45295,6 +45416,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &809261757
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45432,6 +45554,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &810266649
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45569,6 +45692,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &811669869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45706,6 +45830,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &813313550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45843,6 +45968,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &817581384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45980,6 +46106,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &818071732
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46117,6 +46244,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &818099573
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46358,6 +46486,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &821032594
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46495,6 +46624,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &822619305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46632,6 +46762,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &823362703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46769,6 +46900,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &823898156
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46906,6 +47038,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &825331192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47043,6 +47176,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &827599150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47180,6 +47314,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &830826844
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47317,6 +47452,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &831416842
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47503,6 +47639,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &833515138
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47640,6 +47777,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &834040601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47777,6 +47915,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &835293997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47914,6 +48053,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &835901578
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48051,6 +48191,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &841022479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48188,6 +48329,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &843216078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48325,6 +48467,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &847022942
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48462,6 +48605,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &847426020
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48599,6 +48743,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &848166212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48736,6 +48881,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &849140160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48873,6 +49019,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &849263150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49010,6 +49157,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &849882966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49147,6 +49295,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &852886737
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49284,6 +49433,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &857775557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49421,6 +49571,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &860225302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49558,6 +49709,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &862299452
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49770,6 +49922,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &868399144
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49907,6 +50060,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &870022904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50044,6 +50198,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &870242217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50181,6 +50336,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &874509431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50354,6 +50510,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &877931258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50491,6 +50648,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &879618226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50628,6 +50786,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &879625089
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50765,6 +50924,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &880588771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50902,6 +51062,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &881311674
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51039,6 +51200,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &886615739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51176,6 +51338,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &886847984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51313,6 +51476,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &887414854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51450,6 +51614,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &887768595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51587,6 +51752,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &888110478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51724,6 +51890,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &896813448
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51997,6 +52164,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &901465242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52134,6 +52302,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &902392114
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52271,6 +52440,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &905504322
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52408,6 +52578,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &910250890
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52545,6 +52716,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &910395259
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52682,6 +52854,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &911047605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52819,6 +52992,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &911936204
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52956,6 +53130,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &915659644
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53093,6 +53268,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &918242251
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53230,6 +53406,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &920348567
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53442,6 +53619,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &922757790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53579,6 +53757,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &928184154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53716,6 +53895,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &928772659
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53853,6 +54033,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &931458696
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53990,6 +54171,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &935360001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54127,6 +54309,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &937120030
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54264,6 +54447,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &937836148
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54401,6 +54585,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &938189277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54538,6 +54723,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &941832350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54675,6 +54861,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &944162775
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54887,6 +55074,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &945948967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55024,6 +55212,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &947635051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55161,6 +55350,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &949841517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55298,6 +55488,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &949948092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55518,6 +55709,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &955393777
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55655,6 +55847,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &957664499
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55792,6 +55985,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &960090477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55961,6 +56155,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &961188968
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56098,6 +56293,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &961198430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56235,6 +56431,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &964182086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56372,6 +56569,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &966145509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56509,6 +56707,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &966750052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56646,6 +56845,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &966963760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56783,6 +56983,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &971317939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56920,6 +57121,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &973449566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57057,6 +57259,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &974431652
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57194,6 +57397,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &975685414
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57331,6 +57535,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &976356917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57468,6 +57673,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &978479733
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57605,6 +57811,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &980046824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57742,6 +57949,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &984479852
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57954,6 +58162,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &989177447
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58091,6 +58300,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &995498379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58228,6 +58438,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &998022476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58365,6 +58576,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1001823059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58502,6 +58714,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1003236457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58639,6 +58852,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1003481382
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58887,6 +59101,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1007080949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59024,6 +59239,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1011404028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59161,6 +59377,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1012973400
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59298,6 +59515,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1018113793
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59435,6 +59653,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1022834059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59572,6 +59791,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1023826498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59709,6 +59929,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1027832327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59846,6 +60067,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1029192032
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59983,6 +60205,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1029493456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60120,6 +60343,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1030557261
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60257,6 +60481,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1031176081
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60394,6 +60619,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1036431669
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60531,6 +60757,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1037234851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60785,6 +61012,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1044019107
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60922,6 +61150,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1045286101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61059,6 +61288,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1047409185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61196,6 +61426,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1048211751
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61333,6 +61564,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1050234407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61470,6 +61702,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1050267378
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61607,6 +61840,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1057388172
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61744,6 +61978,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1060769263
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61969,6 +62204,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1066472639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62106,6 +62342,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1071673640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62243,6 +62480,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1071901807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62380,6 +62618,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1073597199
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62517,6 +62756,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1076297558
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62654,6 +62894,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1080730694
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62791,6 +63032,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1082606808
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62928,6 +63170,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1085029354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63065,6 +63308,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1088048103
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63202,6 +63446,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1089654563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63339,6 +63584,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1089829721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63476,6 +63722,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1091843477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68458,6 +68705,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1095651427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68595,6 +68843,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1096942914
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68732,6 +68981,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1098096416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69075,6 +69325,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1104371494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69212,6 +69463,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1104825444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69349,6 +69601,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1105048400
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69486,6 +69739,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1111400980
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69623,6 +69877,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1111826598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69760,6 +70015,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1122556001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70008,6 +70264,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1123318837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70145,6 +70402,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1129961724
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70282,6 +70540,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1130352618
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70419,6 +70678,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1131750129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70556,6 +70816,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1134560946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70693,6 +70954,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1135107035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70830,6 +71092,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1139019273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70967,6 +71230,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1146211183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71104,6 +71368,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1151323096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71241,6 +71506,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1153229509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71378,6 +71644,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1154667145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71515,6 +71782,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1157019066
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71652,6 +71920,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1163885207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71825,6 +72094,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1164361488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71962,6 +72232,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1167640767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72099,6 +72370,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1168157807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72311,6 +72583,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1173579523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72448,6 +72721,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1173751252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72585,6 +72859,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1177996373
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72722,6 +72997,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1178112779
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72859,6 +73135,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1178773851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72996,6 +73273,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1183325215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73133,6 +73411,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1183572007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73270,6 +73549,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1184192355
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73407,6 +73687,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1185585280
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73619,6 +73900,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1199765422
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73756,6 +74038,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1200120940
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74004,6 +74287,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1204098675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74216,6 +74500,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1221888724
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74353,6 +74638,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1223039950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74490,6 +74776,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1223223655
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74627,6 +74914,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1228832245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74764,6 +75052,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1229238354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75003,6 +75292,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1235028122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75140,6 +75430,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1243097285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75277,6 +75568,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1247011636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75414,6 +75706,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1255925291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75551,6 +75844,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1256648245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75688,6 +75982,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1259589095
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75825,6 +76120,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1266563928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75998,6 +76294,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1270243832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -76135,6 +76432,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1277521924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -76272,6 +76570,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1280587095
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -76409,6 +76708,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1280723851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -76546,6 +76846,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1283703035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -76683,6 +76984,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1283759098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -76820,6 +77122,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1286636095
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -76957,6 +77260,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1290251012
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77094,6 +77398,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1298312634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77231,6 +77536,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1299869248
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77368,6 +77674,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1300689612
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77505,6 +77812,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1305684832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77642,6 +77950,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1307741883
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77779,6 +78088,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1307904924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77916,6 +78226,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1312688648
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78053,6 +78364,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1313497093
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78190,6 +78502,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1314059240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78362,6 +78675,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1324194519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78499,6 +78813,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1325289790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78636,6 +78951,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1327754521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78773,6 +79089,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1327805087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78910,6 +79227,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1328162616
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79047,6 +79365,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1329566946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79184,6 +79503,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1329660562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79321,6 +79641,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1332677507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79458,6 +79779,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1334018666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79595,6 +79917,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1337489194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79732,6 +80055,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1345043427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79869,6 +80193,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1345249012
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85310,7 +85635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldBlockDamagePopupSpawner
   breakableHitPopupPrefab: {fileID: 387361253526323957, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-  indestructibleHitPopupPrefab: {fileID: 3720902761314952408, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
+  indestructibleHitPopupPrefab: {fileID: 387361253526323957, guid: e822765cae3fb480e8399096951577e7, type: 3}
   spawnOffset: {x: 0, y: 5, z: 0}
   fallbackAutoDestroySeconds: 2
   parentToBlock: 0
@@ -85374,6 +85699,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1351798038
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85511,6 +85837,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1352215748
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85890,6 +86217,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1356886737
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86027,6 +86355,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1358533403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86164,6 +86493,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1358574963
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86301,6 +86631,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1360373294
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86438,6 +86769,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1366750093
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86575,6 +86907,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1367152759
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86712,6 +87045,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1374394784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86849,6 +87183,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1375048346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86986,6 +87321,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1375951030
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87123,6 +87459,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1377685650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87260,6 +87597,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1379540266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87397,6 +87735,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1382619146
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87534,6 +87873,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1385101812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87671,6 +88011,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1391032253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87808,6 +88149,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1394470913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87945,6 +88287,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1396261528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -88082,6 +88425,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1398400571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -88219,6 +88563,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1399377620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -88356,6 +88701,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1399632941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -88493,6 +88839,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1400976554
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -88630,6 +88977,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1401152500
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -88767,6 +89115,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1401614306
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -88936,6 +89285,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1406142533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -89073,6 +89423,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1407274869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -89210,6 +89561,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1407485161
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -89347,6 +89699,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1408002796
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -89484,6 +89837,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1409312625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -89621,6 +89975,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1413281782
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -89758,6 +90113,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1416193768
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -89895,6 +90251,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1417674740
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -90122,6 +90479,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1418478364
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -90259,6 +90617,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1426450898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -90396,6 +90755,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1427497273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -90533,6 +90893,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1428696453
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -90670,6 +91031,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1429928523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -90807,6 +91169,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1432181536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -91080,6 +91443,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1433195208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -91217,6 +91581,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1434641596
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -91354,6 +91719,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1442871613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -91491,6 +91857,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1444832830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -91628,6 +91995,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1446203080
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -91765,6 +92133,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1447045960
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -91902,6 +92271,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1448945509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92039,6 +92409,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1451543378
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92176,6 +92547,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1452269247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92313,6 +92685,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1454173764
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92450,6 +92823,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1456558512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92587,6 +92961,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1459549765
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92724,6 +93099,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1459745558
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92861,6 +93237,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1462561189
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92998,6 +93375,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1465968631
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93135,6 +93513,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1466129502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93272,6 +93651,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1466905681
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93484,6 +93864,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1469936390
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93621,6 +94002,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1470231540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93758,6 +94140,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1471065004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93895,6 +94278,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1481807887
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94032,6 +94416,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1484104758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94169,6 +94554,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1485239580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94381,6 +94767,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1488646752
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94518,6 +94905,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1493919226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94655,6 +95043,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1496333531
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94792,6 +95181,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1499367876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94929,6 +95319,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1502334039
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -95066,6 +95457,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1503604639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -95203,6 +95595,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1503608298
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -95340,6 +95733,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1504310395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -95477,6 +95871,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1505865166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -95614,6 +96009,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1506437215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -95751,6 +96147,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1507500784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -95888,6 +96285,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1509430832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96025,6 +96423,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1510437104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96162,6 +96561,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1510833839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96299,6 +96699,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1512585067
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96436,6 +96837,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1514062425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96573,6 +96975,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1519687838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96710,6 +97113,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1520689185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96847,6 +97251,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1523040229
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96984,6 +97389,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1523818895
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97121,6 +97527,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1523994453
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97258,6 +97665,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1531430543
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97395,6 +97803,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1533840944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97532,6 +97941,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1534198912
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97669,6 +98079,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1534327532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97806,6 +98217,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1535060177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -97943,6 +98355,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1535625127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -98080,6 +98493,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1538695417
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -98322,6 +98736,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1557124154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -98459,6 +98874,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1557226396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -98596,6 +99012,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1560485101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -98733,6 +99150,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1563790786
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -98870,6 +99288,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1566548600
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -99007,6 +99426,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1573010574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -99144,6 +99564,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1575401420
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -99281,6 +99702,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1576200390
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -99418,6 +99840,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1576726604
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -99555,6 +99978,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1578378680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -99828,6 +100252,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1580184729
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -99965,6 +100390,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1582393622
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -100102,6 +100528,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1582677391
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -100239,6 +100666,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1588151227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -100376,6 +100804,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1590359115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -100513,6 +100942,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1591770401
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -100721,6 +101151,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1596971397
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -100903,6 +101334,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1605470123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -101040,6 +101472,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1607967104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -101177,6 +101610,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1611100607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -101314,6 +101748,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1611580510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -101451,6 +101886,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1621903155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -101588,6 +102024,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1631737307
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -101725,6 +102162,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1631884382
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -101862,6 +102300,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1634524683
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -101999,6 +102438,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1636684536
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -102136,6 +102576,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1639976663
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -102273,6 +102714,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1641110818
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -102410,6 +102852,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1644517310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -102547,6 +102990,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1644918191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -102684,6 +103128,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1646770491
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -102897,6 +103342,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1648476192
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -103034,6 +103480,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1649706244
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -103171,6 +103618,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1651219296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -103308,6 +103756,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1655167599
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -103445,6 +103894,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1656639373
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -103582,6 +104032,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1659414830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -103719,6 +104170,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1659777266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -103856,6 +104308,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1660728395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -103993,6 +104446,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1661161102
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -104205,6 +104659,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1662400391
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -104445,6 +104900,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1667677579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -104582,6 +105038,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1672304726
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -104719,6 +105176,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1673008410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -104856,6 +105314,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1674417529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -105261,6 +105720,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1677736459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -105398,6 +105858,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1682424357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -105535,6 +105996,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1683239612
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -105672,6 +106134,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1683452725
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -105809,6 +106272,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1683783468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -105946,6 +106410,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1686612458
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -106083,6 +106548,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1688453271
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -106220,6 +106686,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1688783986
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -106357,6 +106824,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1689105591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -106494,6 +106962,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1691210345
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -106631,6 +107100,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1693307014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -106843,6 +107313,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1695819009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -106980,6 +107451,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1696476074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -107117,6 +107589,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1698518588
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -107254,6 +107727,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1704266211
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -107391,6 +107865,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1705095357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -107633,6 +108108,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1706803308
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -107770,6 +108246,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1707988940
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -107907,6 +108384,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1711453721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -108044,6 +108522,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1712207492
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -108181,6 +108660,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1719027274
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -108318,6 +108798,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1724899868
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -108455,6 +108936,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1729794924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -108592,6 +109074,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1732801244
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -113574,6 +114057,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1734462262
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -113711,6 +114195,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1741732758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -113848,6 +114333,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1745615200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -113985,6 +114471,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1747182050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -114122,6 +114609,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1755270688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -114334,6 +114822,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1762292633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -119307,6 +119796,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1766648436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -119444,6 +119934,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1772399143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -119581,6 +120072,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1783552042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -119718,6 +120210,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1788241441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -119855,6 +120348,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1788578629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -119992,6 +120486,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1795705544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -120165,6 +120660,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1801824303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -120377,6 +120873,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1806475377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -120514,6 +121011,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1807911848
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -120651,6 +121149,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1812678205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -120788,6 +121287,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1816025507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -120925,6 +121425,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1818346682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -121198,6 +121699,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1822212430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -121335,6 +121837,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1823630784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -121472,6 +121975,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1825318755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -121609,6 +122113,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1827900899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -121746,6 +122251,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1828436969
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -121883,6 +122389,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1832048118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122020,6 +122527,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1836520834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122157,6 +122665,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1837041717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122294,6 +122803,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1837319641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122431,6 +122941,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1846083520
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122704,6 +123215,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1853974895
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122841,6 +123353,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1856434124
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -122978,6 +123491,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1858839135
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123115,6 +123629,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1861287387
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123252,6 +123767,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1863305775
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123389,6 +123905,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1863507824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123526,6 +124043,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1872442101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123738,6 +124256,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1878850336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123875,6 +124394,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1882218861
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -124012,6 +124532,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1882582410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -124149,6 +124670,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1888032217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -124422,6 +124944,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1889255790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -124559,6 +125082,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1890083905
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -124696,6 +125220,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1890593915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -124833,6 +125358,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1894216749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -124970,6 +125496,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1894778946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125107,6 +125634,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1894928376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125244,6 +125772,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1895496226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125381,6 +125910,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1899202857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125518,6 +126048,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1900518744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125655,6 +126186,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1901808939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125792,6 +126324,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1902230657
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125929,6 +126462,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1906173451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -126066,6 +126600,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1906949032
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -126203,6 +126738,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1910129446
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -126340,6 +126876,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1916815755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -126477,6 +127014,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1917831298
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -126614,6 +127152,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1918407352
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -126751,6 +127290,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1918623864
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -126888,6 +127428,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1923443668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -127025,6 +127566,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1924084096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -127162,6 +127704,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1926829753
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -127299,6 +127842,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1931293835
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -127436,6 +127980,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1932350587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -127573,6 +128118,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1935262127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -127710,6 +128256,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1937212316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -127847,6 +128394,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1939394606
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -127924,184 +128472,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939394603}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!43 &1943921541
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: TextMeshPro Mesh(Clone)
-  serializedVersion: 12
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 24
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 16
-    localAABB:
-      m_Center: {x: -0.031199843, y: 0.030998774, z: 0}
-      m_Extent: {x: 0.7417067, y: 0.23344353, z: 0}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 000001000200020003000000040005000600060007000400080009000a000a000b0008000c000d000e000e000f000c00
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 16
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 40
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 56
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 72
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 1280
-    _typelessdata: 35dd45bfad4d4fbe000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f3333e33b66c6643f00000000d9891d3d000000000000000035dd45bffb64873e000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f3333e33b9a397d3f00000000d9891d3d000000000000803fd45f9abefb64873e000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803fcdccd13d9a397d3f00000000d9891d3d0000803f0000803fd45f9abead4d4fbe000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803fcdccd13d66c6643f00000000d9891d3d0000803f00000000b8a688bead4d4fbe000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f3333e33b66c6103f00000000d9891d3d0000000000000000b8a688befb64873e000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f3333e33b9a39293f00000000d9891d3d000000000000803fbc67513efb64873e000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803fcdccd13d9a39293f00000000d9891d3d0000803f0000803fbc67513ead4d4fbe000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803fcdccd13d66c6103f00000000d9891d3d0000803f00000000f4d9743ead4d4fbe000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f3333e33b66c6103f00000000d9891d3d0000000000000000f4d9743efb64873e000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f3333e33b9a39293f00000000d9891d3d000000000000803fc8e3353ffb64873e000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803fcdccd13d9a39293f00000000d9891d3d0000803f0000803fc8e3353fad4d4fbe000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803fcdccd13d66c6103f00000000d9891d3d0000803f000000000000000000000000000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080bf000080bf00000000000000000000803f0000803f0000803f0000803f0000803f000000000000000000000000000000000000000000000000
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: -0.031199843, y: 0.030998774, z: 0}
-    m_Extent: {x: 0.7417067, y: 0.23344353, z: 0}
-  m_MeshUsageFlags: 0
-  m_CookingOptions: 30
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  'm_MeshMetrics[0]': 1
-  'm_MeshMetrics[1]': 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
-  m_MeshLodInfo:
-    serializedVersion: 2
-    m_LodSelectionCurve:
-      serializedVersion: 1
-      m_LodSlope: 0
-      m_LodBias: 0
-    m_NumLevels: 1
-    m_SubMeshes:
-    - serializedVersion: 2
-      m_Levels:
-      - serializedVersion: 1
-        m_IndexStart: 0
-        m_IndexCount: 0
 --- !u!1 &1947224331
 GameObject:
   m_ObjectHideFlags: 0
@@ -128162,6 +128532,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1947224334
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -128299,6 +128670,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1948050778
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -128541,6 +128913,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1948506214
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -128678,6 +129051,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1949319157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -128815,6 +129189,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1950005105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -128952,6 +129327,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1952246481
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -129191,6 +129567,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1956993178
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -129328,6 +129705,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1958977291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -129568,6 +129946,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1964440911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -129705,6 +130084,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1965928515
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -129842,6 +130222,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1969755195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -130063,6 +130444,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1973467138
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -130200,6 +130582,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1974598997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -130337,6 +130720,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1975493075
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -130474,6 +130858,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1979739799
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -130611,6 +130996,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1985546351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -130748,6 +131134,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1987708217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -130921,6 +131308,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1993129055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -131058,6 +131446,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1995887774
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -131195,6 +131584,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1996080416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -131332,6 +131722,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &1998402100
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -131545,6 +131936,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2004719156
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -131682,6 +132074,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2008761417
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -132058,6 +132451,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2023671574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -132195,6 +132589,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2025009405
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -132332,6 +132727,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2026662027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -132469,6 +132865,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2029084432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -132606,6 +133003,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2029912421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -132743,6 +133141,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2030163368
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -132880,6 +133279,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2035155964
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -133017,6 +133417,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2037268410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -133154,6 +133555,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2039811168
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -133291,6 +133693,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2041097785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -133428,6 +133831,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2043222665
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -133565,6 +133969,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2045244376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -133702,6 +134107,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2054699130
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -133839,6 +134245,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2056346338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -134293,6 +134700,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2061754683
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -134430,6 +134838,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2062392436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -134567,6 +134976,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2065396814
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -134704,6 +135114,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2065904710
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -134841,6 +135252,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2071629388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -134978,6 +135390,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2073199851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -135115,6 +135528,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2075419087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -135252,6 +135666,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2078336179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -135389,6 +135804,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2079982716
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -135561,6 +135977,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2084284640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -135698,6 +136115,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2085804598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -135835,6 +136253,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2086014499
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -135972,6 +136391,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2088407168
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -136109,6 +136529,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2088710499
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -136246,6 +136667,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2090069905
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -136383,6 +136805,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2090584515
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -136520,6 +136943,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2092223129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -136657,6 +137081,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2095987358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -136794,6 +137219,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2097202647
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -136931,6 +137357,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2098687092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -137068,6 +137495,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2109446463
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -137205,6 +137633,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2114503923
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -137342,6 +137771,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2115044804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -137479,6 +137909,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2115647110
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -137616,6 +138047,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2117373228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -137753,6 +138185,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2125362612
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -142784,6 +143217,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2131747537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -142921,6 +143355,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2135289730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -143058,6 +143493,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2135981987
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -143195,6 +143631,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2140578201
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -143332,6 +143769,7 @@ MonoBehaviour:
   minVisualScale: 0.35
   hitPunchPercent: 0.22
   hitPunchRandomVariance: 0.1
+  hitFlashModule: {fileID: 0}
 --- !u!65 &2142321429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -143499,166 +143937,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!1001 &6807085322051119722
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2189073623995411904, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2189073623995411904, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2189073623995411904, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2189073623995411904, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2189073623995411904, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2189073623995411904, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2189073623995411904, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2189073623995411904, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2189073623995411904, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2189073623995411904, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3720902761314952408, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      propertyPath: fovCamera
-      value: 
-      objectReference: {fileID: 330585545}
-    - target: {fileID: 3720902761314952408, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      propertyPath: cameraOverride
-      value: 
-      objectReference: {fileID: 330585546}
-    - target: {fileID: 6554988818548287965, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1943921541}
-    - target: {fileID: 6778341388929318554, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      propertyPath: m_Name
-      value: Indestruct_BlockDamagePopup (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6778341388929318554, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8272225125746806681, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1943921541}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6904601606272100818, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-  m_SourcePrefab: {fileID: 100100000, guid: 0eb99398e6d9741979011c5fb479d0ab, type: 3}
---- !u!1001 &7523831321607657990
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 387361253526323957, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      propertyPath: fovCamera
-      value: 
-      objectReference: {fileID: 330585545}
-    - target: {fileID: 387361253526323957, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      propertyPath: cameraOverride
-      value: 
-      objectReference: {fileID: 330585546}
-    - target: {fileID: 1395506290242395156, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395506290242395156, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395506290242395156, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395506290242395156, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395506290242395156, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395506290242395156, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395506290242395156, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395506290242395156, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395506290242395156, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395506290242395156, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1791152753667688629, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 249892909}
-    - target: {fileID: 4396185596114668479, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 249892909}
-    - target: {fileID: 7481791605405012883, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      propertyPath: m_Name
-      value: Destruct_BlockDamagePopup
-      objectReference: {fileID: 0}
-    - target: {fileID: 7481791605405012883, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 460557707680573592, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-  m_SourcePrefab: {fileID: 100100000, guid: 4b280632c536040ffa875902ce6848a8, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -143672,5 +143950,3 @@ SceneRoots:
   - {fileID: 5987413}
   - {fileID: 1404361429}
   - {fileID: 671861867}
-  - {fileID: 7523831321607657990}
-  - {fileID: 6807085322051119722}

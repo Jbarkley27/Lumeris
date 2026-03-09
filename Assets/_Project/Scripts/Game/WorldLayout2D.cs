@@ -36,18 +36,24 @@ public class WorldLayout2D : ScriptableObject
     /// </summary>
     public int CellCount => width * height;
 
-    [Header("Per-Floor Prefab Mapping")]
-    [Tooltip("Tier 1 prefab used by this specific floor layout.")]
-    [SerializeField] private GameObject tier1BlockPrefab;
-    [Tooltip("Tier 2 prefab used by this specific floor layout.")]
-    [SerializeField] private GameObject tier2BlockPrefab;
-    [Tooltip("Tier 3 prefab used by this specific floor layout.")]
-    [SerializeField] private GameObject tier3BlockPrefab;
-    [Tooltip("Tier 4 prefab used by this specific floor layout.")]
-    [SerializeField] private GameObject tier4BlockPrefab;
+    [Header("Per-Floor Normal Block Visual Mapping")]
+    [Tooltip("Single prefab used for all non-special blocks in this layout.")]
+    [SerializeField] private GameObject normalBlockPrefab;
 
-    [Tooltip("Tier 5 prefab used by this specific floor layout.")]
-    [SerializeField] private GameObject tier5BlockPrefab;
+    [Tooltip("Material used by non-special Tier 1 blocks.")]
+    [SerializeField] private Material tier1BlockMaterial;
+
+    [Tooltip("Material used by non-special Tier 2 blocks.")]
+    [SerializeField] private Material tier2BlockMaterial;
+
+    [Tooltip("Material used by non-special Tier 3 blocks.")]
+    [SerializeField] private Material tier3BlockMaterial;
+
+    [Tooltip("Material used by non-special Tier 4 blocks.")]
+    [SerializeField] private Material tier4BlockMaterial;
+
+    [Tooltip("Material used by non-special Tier 5 blocks.")]
+    [SerializeField] private Material tier5BlockMaterial;
 
 
     [Tooltip("Special prefab mapping for this floor (typeId -> prefab).")]
@@ -94,6 +100,16 @@ public class WorldLayout2D : ScriptableObject
     /// Floor-wide reward scalar applied to all normal block tiers in this layout.
     /// </summary>
     public float FloorRewardMultiplier => floorRewardMultiplier;
+
+    [Header("Camera")]
+    [Tooltip("Target camera background color when this layout is loaded.")]
+    [SerializeField] private Color cameraBackgroundColor = Color.black;
+
+    /// <summary>
+    /// Background color requested by this layout.
+    /// </summary>
+    public Color CameraBackgroundColor => cameraBackgroundColor;
+
 
     
 
@@ -229,6 +245,8 @@ public class WorldLayout2D : ScriptableObject
 
     /// <summary>
     /// Resolves which prefab should spawn for a given cell using this floor's mapping.
+    /// - Normal cells use one shared normal prefab.
+    /// - Special cells use special typeId mapping.
     /// </summary>
     public GameObject ResolvePrefabForCell(BlockCellData cell)
     {
@@ -257,17 +275,22 @@ public class WorldLayout2D : ScriptableObject
             return null;
         }
 
-        // Normal blocks resolve by tier.
-        switch (cell.tier)
-        {
-            case BlockTier.Tier1: return tier1BlockPrefab;
-            case BlockTier.Tier2: return tier2BlockPrefab;
-            case BlockTier.Tier3: return tier3BlockPrefab;
-            case BlockTier.Tier4: return tier4BlockPrefab;
-            case BlockTier.Tier5: return tier5BlockPrefab;
+        return normalBlockPrefab;
+    }
 
-            // Fallback keeps old behavior safe if a tier is ever unset/unknown.
-            default: return tier1BlockPrefab;
+    /// <summary>
+    /// Resolves the material to apply on a non-special block by tier.
+    /// </summary>
+    public Material ResolveNormalBlockMaterial(BlockTier tier)
+    {
+        switch (tier)
+        {
+            case BlockTier.Tier1: return tier1BlockMaterial;
+            case BlockTier.Tier2: return tier2BlockMaterial;
+            case BlockTier.Tier3: return tier3BlockMaterial;
+            case BlockTier.Tier4: return tier4BlockMaterial;
+            case BlockTier.Tier5: return tier5BlockMaterial;
+            default: return tier1BlockMaterial;
         }
 
     }
@@ -379,4 +402,3 @@ public class SpecialBlockPrefabEntry
     [Tooltip("Prefab used when this special type is requested.")]
     public GameObject prefab;
 }
-

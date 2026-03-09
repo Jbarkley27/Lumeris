@@ -28,8 +28,11 @@ public class WorldBlock : MonoBehaviour
     [SerializeField] private Transform visualRoot;
     [Tooltip("Minimum scale factor when HP reaches zero-ish visual state.")]
     [SerializeField] private float minVisualScale = 0.35f;
+    [Tooltip("Optional explicit renderers that receive tier material. If empty, all child MeshRenderers are used.")]
+    [SerializeField] private MeshRenderer[] tierMaterialRenderers;
 
     private Vector3 initialVisualScale;
+    private MeshRenderer[] cachedTierMaterialRenderers;
     public bool IsDestroyed { get; private set; }
 
     // Prevent using damage logic before the block receives runtime setup data.
@@ -81,7 +84,70 @@ public class WorldBlock : MonoBehaviour
     /// </summary>
     public static event Action<WorldBlock, int, Vector3, bool> DamagePopupRequested;
 
+    public HitFlashModule hitFlashModule;
 
+
+
+    /// <summary>
+    /// Applies the tier material to this block's renderers.
+    /// Intended for non-special blocks during loader spawn.
+    /// </summary>
+    public void ApplyTierMaterial(Material tierMaterial)
+    {
+        if (tierMaterial == null)
+        {
+            Debug.LogWarning($"WorldBlock '{name}' received null tier material.");
+            return;
+        }
+
+        MeshRenderer[] renderers = GetTierMaterialRenderers();
+        if (renderers.Length == 0)
+        {
+            Debug.LogWarning($"WorldBlock '{name}' has no MeshRenderer to apply tier material.");
+            return;
+        }
+
+        for (int r = 0; r < renderers.Length; r++)
+        {
+            MeshRenderer renderer = renderers[r];
+            if (renderer == null)
+            {
+                continue;
+            }
+
+            Material[] sharedMats = renderer.sharedMaterials;
+            if (sharedMats == null || sharedMats.Length == 0)
+            {
+                renderer.sharedMaterial = tierMaterial;
+                continue;
+            }
+
+            for (int i = 0; i < sharedMats.Length; i++)
+            {
+                sharedMats[i] = tierMaterial;
+            }
+
+            renderer.sharedMaterials = sharedMats;
+        }
+    }
+
+    /// <summary>
+    /// Returns explicit renderer bindings when assigned, otherwise auto-discovers child MeshRenderers.
+    /// </summary>
+    private MeshRenderer[] GetTierMaterialRenderers()
+    {
+        if (tierMaterialRenderers != null && tierMaterialRenderers.Length > 0)
+        {
+            return tierMaterialRenderers;
+        }
+
+        if (cachedTierMaterialRenderers == null || cachedTierMaterialRenderers.Length == 0)
+        {
+            cachedTierMaterialRenderers = GetComponentsInChildren<MeshRenderer>(true);
+        }
+
+        return cachedTierMaterialRenderers;
+    }
 
     /// <summary>
     /// Initializes this block from layout/loader data.
@@ -102,6 +168,11 @@ public class WorldBlock : MonoBehaviour
         // Apply per-cell destruction rule.
         canBeDestroyed = initData.canBeDestroyed;
 
+        hitFlashModule = GetComponent<HitFlashModule>();
+        if (hitFlashModule == null)
+        {
+            Debug.LogWarning($"WorldBlock '{name}' is missing a HitFlashModule component.");
+        }
 
         if (visualRoot == null)
         {
@@ -167,6 +238,15 @@ public class WorldBlock : MonoBehaviour
             initialVisualScale = visualRoot.localScale;
             isInitialized = true;
 
+            if (hitFlashModule == null)
+            {
+                hitFlashModule = GetComponent<HitFlashModule>();
+                if (hitFlashModule == null)
+                {
+                    Debug.LogWarning($"WorldBlock '{name}' is missing a HitFlashModule component.");
+                }
+            }
+
             Debug.LogWarning($"WorldBlock '{name}' auto-initialized from serialized scene values. Prefer runtime loader spawn.");
         }
 
@@ -183,6 +263,7 @@ public class WorldBlock : MonoBehaviour
 
 
         currentHp = Mathf.Max(0, currentHp - damageAmount);
+        hitFlashModule?.FlashAll();
         ApplyScaleFromHp();
         RaiseDamagePopupRequest(damageAmount, false);
 

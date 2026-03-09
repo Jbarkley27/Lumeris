@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -12,6 +14,43 @@ using UnityEngine;
 /// </summary>
 public class LevelProgressionManager : MonoBehaviour
 {
+    [Serializable]
+    private class TierSpreadEntry
+    {
+        [Tooltip("Color key from sequence entry (example: Blue).")]
+        public string colorId = "Blue";
+
+        [Tooltip("Tier inside color group (1..5).")]
+        [Range(1, 5)] public int tierInColor = 1;
+
+        [Tooltip("Relative weight for block tier 1.")]
+        [Min(0f)] public float tier1Weight = 0.7f;
+        [Tooltip("Relative weight for block tier 2.")]
+        [Min(0f)] public float tier2Weight = 0.2f;
+        [Tooltip("Relative weight for block tier 3.")]
+        [Min(0f)] public float tier3Weight = 0.1f;
+        [Tooltip("Relative weight for block tier 4.")]
+        [Min(0f)] public float tier4Weight = 0f;
+        [Tooltip("Relative weight for block tier 5.")]
+        [Min(0f)] public float tier5Weight = 0f;
+    }
+
+    [Serializable]
+    private struct ProceduralTierCandidate
+    {
+        public int x;
+        public int y;
+        public float score;
+    }
+
+    private enum ProceduralTierPattern
+    {
+        MixedFractal = 0,
+        BlobClusters = 1,
+        RidgeBands = 2,
+        EdgeFalloff = 3
+    }
+
     public enum LevelObjectiveRule
     {
         DestroyRegularPercent,
@@ -29,6 +68,38 @@ public class LevelProgressionManager : MonoBehaviour
     [Header("Startup")]
     [Tooltip("If true, loads current sequence level in Start.")]
     [SerializeField] private bool loadCurrentLevelOnStart = true;
+
+    [Header("Procedural Tier Distribution")]
+    [Tooltip("If true, each level load clones the layout and procedurally assigns normal block tiers by spread rule.")]
+    [SerializeField] private bool useProceduralTierDistribution = true;
+
+    [Tooltip("Rules keyed by sequence colorId + tierInColor. Each rule defines desired tier spread.")]
+    [SerializeField] private TierSpreadEntry[] proceduralTierSpreadEntries =
+    {
+        new TierSpreadEntry
+        {
+            colorId = "Blue",
+            tierInColor = 1,
+            tier1Weight = 0.7f,
+            tier2Weight = 0.2f,
+            tier3Weight = 0.1f,
+            tier4Weight = 0f,
+            tier5Weight = 0f
+        }
+    };
+
+    [Tooltip("Base seed for deterministic procedural tier pattern generation.")]
+    [SerializeField] private int proceduralTierBaseSeed = 1337;
+
+    [Min(0.001f)]
+    [Tooltip("Feature size of procedural tier pattern. Lower = larger blobs, higher = noisier distribution.")]
+    [SerializeField] private float proceduralTierNoiseScale = 0.08f;
+
+    [Range(0f, 1f)]
+    [Tooltip("Blend amount between preset pattern and hash noise.")]
+    [SerializeField] private float proceduralTierRandomBlend = 0.2f;
+
+    [SerializeField] private ProceduralTierPattern proceduralTierPattern = ProceduralTierPattern.MixedFractal;
 
     [Header("Objective Rules (tiers 1..4)")]
     [Range(0.01f, 1f)] [SerializeField] private float tier1RequiredRegularDestroyPercent = 0.40f;
@@ -83,6 +154,7 @@ public class LevelProgressionManager : MonoBehaviour
     [SerializeField] private bool objectiveCompleted = false;
 
     private Coroutine pendingAutoAdvanceRoutine;
+    private WorldLayout2D runtimeProceduralLayoutInstance;
 
     public int CurrentLevelIndex => currentLevelIndex;
     public bool IsRunCompleted => runCompleted;
@@ -192,6 +264,8 @@ public class LevelProgressionManager : MonoBehaviour
             StopCoroutine(pendingAutoAdvanceRoutine);
             pendingAutoAdvanceRoutine = null;
         }
+
+        ReleaseRuntimeProceduralLayout();
     }
 
     [ContextMenu("Go To Next Level")]
@@ -297,6 +371,304 @@ public class LevelProgressionManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Clones the authored layout and applies procedural tier distribution.
+    /// This keeps source assets immutable while enabling per-load generation.
+    /// </summary>
+    private WorldLayout2D BuildRuntimeProceduralLayout(SequenceLevelEntry entry, int levelIndex)
+    {
+        if (entry == null || entry.layout == null)
+        {
+            return null;
+        }
+
+        ReleaseRuntimeProceduralLayout();
+
+        runtimeProceduralLayoutInstance = Instantiate(entry.layout);
+        runtimeProceduralLayoutInstance.name = $"{entry.layout.name}_Runtime_{levelIndex}";
+
+        int seed = BuildProceduralSeed(entry.layout.floorId, levelIndex);
+        ApplyTierSpreadToLayout(runtimeProceduralLayoutInstance, entry.colorId, entry.tierInColor, seed);
+
+        return runtimeProceduralLayoutInstance;
+    }
+
+    private void ReleaseRuntimeProceduralLayout()
+    {
+        if (runtimeProceduralLayoutInstance == null)
+        {
+            return;
+        }
+
+        if (Application.isPlaying)
+        {
+            Destroy(runtimeProceduralLayoutInstance);
+        }
+        else
+        {
+            DestroyImmediate(runtimeProceduralLayoutInstance);
+        }
+
+        runtimeProceduralLayoutInstance = null;
+    }
+
+    /// <summary>
+    /// Applies tier spread to breakable non-special cells:
+    /// 1) score cells from procedural pattern
+    /// 2) compute exact tier quotas from spread
+    /// 3) assign lowest score->Tier1 ... highest score->Tier5
+    /// </summary>
+    private void ApplyTierSpreadToLayout(WorldLayout2D layout, string colorId, int tierInColor, int seed)
+    {
+        if (layout == null)
+        {
+            return;
+        }
+
+        layout.EnsureCellArraySize();
+
+        List<ProceduralTierCandidate> candidates = new List<ProceduralTierCandidate>(layout.width * layout.height);
+
+        for (int y = 0; y < layout.height; y++)
+        {
+            for (int x = 0; x < layout.width; x++)
+            {
+                BlockCellData cell = layout.GetCell(x, y);
+                if (cell == null || !cell.hasBlock)
+                {
+                    continue;
+                }
+
+                if (cell.isSpecialConditionBlock || !cell.canBeDestroyed)
+                {
+                    continue;
+                }
+
+                float pattern01 = EvaluateTierPattern01(x, y, layout.width, layout.height, seed);
+                float random01 = Hash01(x, y, seed ^ unchecked((int)0x9E3779B9u));
+                float finalScore = Mathf.Lerp(pattern01, random01, proceduralTierRandomBlend);
+
+                candidates.Add(new ProceduralTierCandidate
+                {
+                    x = x,
+                    y = y,
+                    score = finalScore
+                });
+            }
+        }
+
+        if (candidates.Count == 0)
+        {
+            return;
+        }
+
+        candidates.Sort((a, b) => a.score.CompareTo(b.score));
+
+        float[] weights = ResolveSpreadWeights(colorId, tierInColor);
+        int[] tierCounts = ComputeExactTierCounts(candidates.Count, weights);
+
+        int cursor = 0;
+        for (int tier = 1; tier <= 5; tier++)
+        {
+            int take = tierCounts[tier - 1];
+            for (int i = 0; i < take && cursor < candidates.Count; i++)
+            {
+                ProceduralTierCandidate candidate = candidates[cursor++];
+                BlockCellData cell = layout.GetCell(candidate.x, candidate.y);
+                if (cell == null)
+                {
+                    continue;
+                }
+
+                cell.tier = (BlockTier)tier;
+                layout.SetCell(candidate.x, candidate.y, cell);
+            }
+        }
+    }
+
+    private float[] ResolveSpreadWeights(string colorId, int tierInColor)
+    {
+        if (proceduralTierSpreadEntries != null)
+        {
+            for (int i = 0; i < proceduralTierSpreadEntries.Length; i++)
+            {
+                TierSpreadEntry entry = proceduralTierSpreadEntries[i];
+                if (entry == null)
+                {
+                    continue;
+                }
+
+                if (!string.Equals(entry.colorId, colorId, StringComparison.OrdinalIgnoreCase))
+                {
+                    continue;
+                }
+
+                if (entry.tierInColor != tierInColor)
+                {
+                    continue;
+                }
+
+                return new[]
+                {
+                    Mathf.Max(0f, entry.tier1Weight),
+                    Mathf.Max(0f, entry.tier2Weight),
+                    Mathf.Max(0f, entry.tier3Weight),
+                    Mathf.Max(0f, entry.tier4Weight),
+                    Mathf.Max(0f, entry.tier5Weight),
+                };
+            }
+        }
+
+        int clampedTier = Mathf.Clamp(tierInColor, 1, 5);
+        float[] fallback = new float[5];
+        fallback[clampedTier - 1] = 1f;
+        return fallback;
+    }
+
+    private static int[] ComputeExactTierCounts(int totalCount, float[] weights)
+    {
+        int[] counts = new int[5];
+        if (totalCount <= 0)
+        {
+            return counts;
+        }
+
+        float totalWeight = 0f;
+        for (int i = 0; i < 5; i++)
+        {
+            totalWeight += Mathf.Max(0f, weights != null && i < weights.Length ? weights[i] : 0f);
+        }
+
+        if (totalWeight <= 0f)
+        {
+            counts[0] = totalCount;
+            return counts;
+        }
+
+        float[] fractions = new float[5];
+        int assigned = 0;
+
+        for (int i = 0; i < 5; i++)
+        {
+            float safeWeight = Mathf.Max(0f, weights[i]);
+            float exact = safeWeight / totalWeight * totalCount;
+            counts[i] = Mathf.FloorToInt(exact);
+            fractions[i] = exact - counts[i];
+            assigned += counts[i];
+        }
+
+        int remaining = totalCount - assigned;
+        for (int r = 0; r < remaining; r++)
+        {
+            int bestIndex = 0;
+            for (int i = 1; i < 5; i++)
+            {
+                if (fractions[i] > fractions[bestIndex])
+                {
+                    bestIndex = i;
+                }
+            }
+
+            counts[bestIndex]++;
+            fractions[bestIndex] = -1f;
+        }
+
+        return counts;
+    }
+
+    private float EvaluateTierPattern01(int x, int y, int width, int height, int seed)
+    {
+        float nx = x * proceduralTierNoiseScale;
+        float ny = y * proceduralTierNoiseScale;
+
+        switch (proceduralTierPattern)
+        {
+            case ProceduralTierPattern.BlobClusters:
+            {
+                float coarse = PerlinSeeded(nx * 0.45f, ny * 0.45f, seed);
+                float detail = PerlinSeeded(nx * 1.6f, ny * 1.6f, seed + 17);
+                return Mathf.Clamp01(coarse * 0.8f + detail * 0.2f);
+            }
+
+            case ProceduralTierPattern.RidgeBands:
+            {
+                float n = PerlinSeeded(nx * 1.2f, ny * 1.2f, seed);
+                return 1f - Mathf.Abs(2f * n - 1f);
+            }
+
+            case ProceduralTierPattern.EdgeFalloff:
+            {
+                float cx = (width - 1) * 0.5f;
+                float cy = (height - 1) * 0.5f;
+                float dx = x - cx;
+                float dy = y - cy;
+                float maxRadius = Mathf.Max(0.0001f, Mathf.Sqrt(cx * cx + cy * cy));
+                return Mathf.Clamp01(Mathf.Sqrt(dx * dx + dy * dy) / maxRadius);
+            }
+
+            case ProceduralTierPattern.MixedFractal:
+            default:
+            {
+                float o1 = PerlinSeeded(nx * 0.50f, ny * 0.50f, seed);
+                float o2 = PerlinSeeded(nx * 1.20f, ny * 1.20f, seed + 31);
+                float o3 = PerlinSeeded(nx * 2.40f, ny * 2.40f, seed + 67);
+                return Mathf.Clamp01(o1 * 0.55f + o2 * 0.30f + o3 * 0.15f);
+            }
+        }
+    }
+
+    private int BuildProceduralSeed(string floorId, int levelIndex)
+    {
+        unchecked
+        {
+            int hash = proceduralTierBaseSeed;
+            hash = hash * 397 ^ levelIndex;
+            hash = hash * 397 ^ StableStringHash(floorId);
+            return hash;
+        }
+    }
+
+    private static int StableStringHash(string value)
+    {
+        if (string.IsNullOrEmpty(value))
+        {
+            return 0;
+        }
+
+        unchecked
+        {
+            int hash = 23;
+            for (int i = 0; i < value.Length; i++)
+            {
+                hash = hash * 31 + value[i];
+            }
+
+            return hash;
+        }
+    }
+
+    private static float PerlinSeeded(float x, float y, int seed)
+    {
+        float ox = (seed & 1023) * 0.073f;
+        float oy = ((seed >> 10) & 1023) * 0.117f;
+        return Mathf.PerlinNoise(x + ox, y + oy);
+    }
+
+    private static float Hash01(int x, int y, int seed)
+    {
+        unchecked
+        {
+            int h = seed;
+            h ^= x * 374761393;
+            h = (h << 13) ^ h;
+            h ^= y * 668265263;
+            h = h * 1274126177;
+
+            uint u = (uint)h;
+            return (u & 0x00FFFFFF) / 16777215f;
+        }
+    }
+
+    /// <summary>
     /// Loads the level at currentLevelIndex from sequence.
     /// </summary>
     private void LoadCurrentLevelFromSequence()
@@ -338,7 +710,24 @@ public class LevelProgressionManager : MonoBehaviour
         }
 
         runCompleted = false;
-        worldGridLoader.LoadSpecificLayout(entry.layout);
+
+        WorldLayout2D layoutToLoad = entry.layout;
+        if (useProceduralTierDistribution)
+        {
+            layoutToLoad = BuildRuntimeProceduralLayout(entry, currentLevelIndex);
+        }
+        else
+        {
+            ReleaseRuntimeProceduralLayout();
+        }
+
+        if (layoutToLoad == null)
+        {
+            Debug.LogError("LevelProgressionManager: Failed to resolve runtime layout for loading.");
+            return;
+        }
+
+        worldGridLoader.LoadSpecificLayout(layoutToLoad);
     }
 
     /// <summary>
