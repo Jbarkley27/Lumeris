@@ -23,7 +23,12 @@ public class ProjectilePool : MonoBehaviour
 
     private void Awake()
     {
-        BuildIfNeeded();
+        // Runtime-created pools receive their definition right after AddComponent via InitializeRuntime().
+        // Avoid noisy false error on Awake when definition has not been injected yet.
+        if (definition != null && definition.projectilePrefab != null)
+        {
+            BuildIfNeeded();
+        }
     }
 
     /// <summary>

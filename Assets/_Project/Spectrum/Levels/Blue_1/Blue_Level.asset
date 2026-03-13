@@ -1,0 +1,634 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb97057c92e643db80a6e6e99207f09, type: 3}
+  m_Name: Blue_Level
+  m_EditorClassIdentifier: Assembly-CSharp::WorldLayout2D
+  floorId: blue_01
+  width: 10
+  height: 10
+  cellSize: 7
+  worldOrigin: {x: 0, y: 0, z: 0}
+  cells:
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 1
+    specialBlockTypeId: story
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 3
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 3
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 2
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 1
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  normalBlockPrefab: {fileID: 6512538129946581902, guid: 59711a973304a49c8a4a3fc1e81d7d20, type: 3}
+  tier1BlockMaterial: {fileID: 2100000, guid: 42774459ab678487092aee0a823514a6, type: 2}
+  tier2BlockMaterial: {fileID: 2100000, guid: 33513a334a1a8443c88daa1e7b4cc103, type: 2}
+  tier3BlockMaterial: {fileID: 2100000, guid: c6069d3d498f54263ad1296953f5f18f, type: 2}
+  tier4BlockMaterial: {fileID: 2100000, guid: 3ec9c6b6ebd9f4013bc6b1ceaa0d88a6, type: 2}
+  tier5BlockMaterial: {fileID: 2100000, guid: 8cdc5bdae678545a0aecb28a2d8bbea3, type: 2}
+  specialBlockPrefabs:
+  - typeId: story
+    prefab: {fileID: 6286140348420024885, guid: 581f581ee0dd84a65a91a585912d3014, type: 3}
+  useCenteredOrigin: 1
+  layoutTier: 1
+  floorHpMultiplier: 5
+  floorRewardMultiplier: 1
+  cameraBackgroundColor: {r: 0.6901922, g: 0.7671227, b: 0.8867924, a: 1}

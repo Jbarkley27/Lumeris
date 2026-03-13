@@ -69,8 +69,41 @@ public class LevelProgressionManager : MonoBehaviour
     [Tooltip("If true, loads current sequence level in Start.")]
     [SerializeField] private bool loadCurrentLevelOnStart = true;
 
+    [Header("Procedural Visual Generation")]
+    [Tooltip("If true, each level load clones the layout and applies visual generation (occupancy + height offsets) by profile.")]
+    [SerializeField] private bool useProceduralVisualGeneration = false;
+
+    [Tooltip("Rules keyed by sequence colorId + tierInColor that drive visual generation only (not combat tier percentages).")]
+    [SerializeField] private LayoutVisualGenerationEntry[] proceduralVisualGenerationEntries =
+    {
+        new LayoutVisualGenerationEntry
+        {
+            colorId = "Blue",
+            tierInColor = 1,
+            occupancyPercent = 0.75f,
+            includeEmptyCellsInGeneration = false,
+            preserveSpecialBlocks = true,
+            preserveIndestructibleBlocks = true,
+            occupancyPattern = LayoutVisualPattern.BlobClusters,
+            occupancyNoiseScale = 0.08f,
+            occupancyRandomBlend = 0.2f,
+            invertOccupancyPattern = false,
+            heightPattern = LayoutVisualPattern.MixedFractal,
+            heightNoiseScale = 0.09f,
+            heightRandomBlend = 0.15f,
+            minHeightOffset = 0f,
+            maxHeightOffset = 1.1f
+        }
+    };
+
+    [Tooltip("Base seed for deterministic visual generation profiles.")]
+    [SerializeField] private int proceduralVisualBaseSeed = 4242;
+
+    [Tooltip("If false, visual generation will keep all generated cells at height offset 0.")]
+    [SerializeField] private bool proceduralVisualApplyHeightOffsets = false;
+
     [Header("Procedural Tier Distribution")]
-    [Tooltip("If true, each level load clones the layout and procedurally assigns normal block tiers by spread rule.")]
+    [Tooltip("If true, each level load procedurally assigns normal block tiers by spread rule.")]
     [SerializeField] private bool useProceduralTierDistribution = true;
 
     [Tooltip("Rules keyed by sequence colorId + tierInColor. Each rule defines desired tier spread.")]
@@ -132,6 +165,10 @@ public class LevelProgressionManager : MonoBehaviour
     [Tooltip("If true, progression save emits save-start/save-finish UI events.")]
     [SerializeField] private bool emitSaveFeedbackEvents = true;
 
+    [Header("Run Seed")]
+    [Tooltip("When enabled, one seed is generated/saved per run and reused for all procedural level seeds.")]
+    [SerializeField] private bool useRunSeed = true;
+
     [Header("Debug")]
     [SerializeField] private bool logProgression = true;
 
@@ -152,6 +189,8 @@ public class LevelProgressionManager : MonoBehaviour
 
     [SerializeField] private float objectiveProgress01 = 0f;
     [SerializeField] private bool objectiveCompleted = false;
+    [SerializeField] private int currentRunSeed = 0;
+    [SerializeField] private bool hasRunSeed = false;
 
     private Coroutine pendingAutoAdvanceRoutine;
     private WorldLayout2D runtimeProceduralLayoutInstance;
@@ -189,6 +228,16 @@ public class LevelProgressionManager : MonoBehaviour
     public string DebugRunCompletedSaveKey => BuildRunSaveKey("run_completed");
 
     /// <summary>
+    /// Exposes fully-resolved saved key for run seed.
+    /// </summary>
+    public string DebugRunSeedSaveKey => BuildRunSaveKey("run_seed");
+
+    /// <summary>
+    /// Exposes active run seed (0 when not initialized).
+    /// </summary>
+    public int DebugCurrentRunSeed => hasRunSeed ? currentRunSeed : 0;
+
+    /// <summary>
     /// Debug helper to read currently saved progression values without mutating runtime state.
     /// Returns false if persistence is off or no keys exist yet.
     /// </summary>
@@ -221,6 +270,7 @@ public class LevelProgressionManager : MonoBehaviour
     {
         ResolveReferences();
         LoadPersistentProgressState();
+        EnsureRunSeedInitialized(saveIfGenerated: persistProgressionState);
     }
 
     private void OnEnable()
@@ -346,9 +396,17 @@ public class LevelProgressionManager : MonoBehaviour
         if (clearPersistedState)
         {
             ClearPersistentProgressState(emitSaveFeedbackEvents);
+
+            if (useRunSeed)
+            {
+                RegenerateRunSeed();
+                SaveRunSeedIfPossible();
+            }
         }
         else
         {
+            // Keep current run seed for in-run resets. If seed was never initialized, create one now.
+            EnsureRunSeedInitialized(saveIfGenerated: false);
             SavePersistentProgressState(emitSaveFeedbackEvents);
         }
 
@@ -371,7 +429,9 @@ public class LevelProgressionManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Clones the authored layout and applies procedural tier distribution.
+    /// Clones the authored layout and applies enabled procedural passes:
+    /// 1) visual generation (optional)
+    /// 2) tier spread distribution (optional)
     /// This keeps source assets immutable while enabling per-load generation.
     /// </summary>
     private WorldLayout2D BuildRuntimeProceduralLayout(SequenceLevelEntry entry, int levelIndex)
@@ -386,10 +446,40 @@ public class LevelProgressionManager : MonoBehaviour
         runtimeProceduralLayoutInstance = Instantiate(entry.layout);
         runtimeProceduralLayoutInstance.name = $"{entry.layout.name}_Runtime_{levelIndex}";
 
-        int seed = BuildProceduralSeed(entry.layout.floorId, levelIndex);
-        ApplyTierSpreadToLayout(runtimeProceduralLayoutInstance, entry.colorId, entry.tierInColor, seed);
+        if (useProceduralVisualGeneration &&
+            TryResolveVisualGenerationEntry(entry.colorId, entry.tierInColor, out LayoutVisualGenerationEntry visualEntry))
+        {
+            int visualSeed = BuildProceduralVisualSeed(entry.layout.floorId, levelIndex);
+            LayoutVisualGenerationService.ApplyToLayout(
+                runtimeProceduralLayoutInstance,
+                visualEntry,
+                visualSeed,
+                proceduralVisualApplyHeightOffsets);
+        }
+
+        if (useProceduralTierDistribution)
+        {
+            int tierSeed = BuildProceduralTierSeed(entry.layout.floorId, levelIndex);
+            ApplyTierSpreadToLayout(runtimeProceduralLayoutInstance, entry.colorId, entry.tierInColor, tierSeed);
+        }
 
         return runtimeProceduralLayoutInstance;
+    }
+
+    /// <summary>
+    /// Resolves the visual profile for a sequence color/tier.
+    /// Visual generation is skipped when no profile exists.
+    /// </summary>
+    private bool TryResolveVisualGenerationEntry(
+        string colorId,
+        int tierInColor,
+        out LayoutVisualGenerationEntry entry)
+    {
+        return LayoutVisualGenerationService.TryFindEntry(
+            proceduralVisualGenerationEntries,
+            colorId,
+            tierInColor,
+            out entry);
     }
 
     private void ReleaseRuntimeProceduralLayout()
@@ -616,15 +706,84 @@ public class LevelProgressionManager : MonoBehaviour
         }
     }
 
-    private int BuildProceduralSeed(string floorId, int levelIndex)
+    private int BuildProceduralTierSeed(string floorId, int levelIndex)
+    {
+        return BuildProceduralSeed(proceduralTierBaseSeed, floorId, levelIndex);
+    }
+
+    private int BuildProceduralVisualSeed(string floorId, int levelIndex)
+    {
+        return BuildProceduralSeed(proceduralVisualBaseSeed, floorId, levelIndex);
+    }
+
+    private int BuildProceduralSeed(int baseSeed, string floorId, int levelIndex)
     {
         unchecked
         {
-            int hash = proceduralTierBaseSeed;
+            int hash = baseSeed;
             hash = hash * 397 ^ levelIndex;
             hash = hash * 397 ^ StableStringHash(floorId);
+            hash = hash * 397 ^ GetRunSeedContribution();
             return hash;
         }
+    }
+
+    /// <summary>
+    /// Returns run-seed contribution used for per-level procedural generation.
+    /// - Uses one persistent run seed when enabled.
+    /// - Returns 0 when run-seed mode is disabled.
+    /// </summary>
+    private int GetRunSeedContribution()
+    {
+        if (!useRunSeed)
+        {
+            return 0;
+        }
+
+        EnsureRunSeedInitialized(saveIfGenerated: persistProgressionState);
+        return currentRunSeed;
+    }
+
+    /// <summary>
+    /// Ensures the manager has a run seed in memory.
+    /// If missing, generates a new seed and optionally persists it.
+    /// </summary>
+    private void EnsureRunSeedInitialized(bool saveIfGenerated)
+    {
+        if (!useRunSeed || hasRunSeed)
+        {
+            return;
+        }
+
+        RegenerateRunSeed();
+
+        if (saveIfGenerated)
+        {
+            SaveRunSeedIfPossible();
+        }
+    }
+
+    /// <summary>
+    /// Generates a new run seed for future procedural derivations.
+    /// </summary>
+    private void RegenerateRunSeed()
+    {
+        // Delegate generation strategy to shared seed service.
+        currentRunSeed = RunSeedService.GenerateSeed();
+        hasRunSeed = true;
+    }
+
+    /// <summary>
+    /// Writes only run seed key. Used when progression keys are intentionally cleared.
+    /// </summary>
+    private void SaveRunSeedIfPossible()
+    {
+        if (!persistProgressionState || !useRunSeed || !hasRunSeed)
+        {
+            return;
+        }
+
+        RunSeedService.SaveSeed(BuildRunSaveKey("run_seed"), currentRunSeed);
     }
 
     private static int StableStringHash(string value)
@@ -711,8 +870,10 @@ public class LevelProgressionManager : MonoBehaviour
 
         runCompleted = false;
 
+        bool needsRuntimeLayout = useProceduralVisualGeneration || useProceduralTierDistribution;
+
         WorldLayout2D layoutToLoad = entry.layout;
-        if (useProceduralTierDistribution)
+        if (needsRuntimeLayout)
         {
             layoutToLoad = BuildRuntimeProceduralLayout(entry, currentLevelIndex);
         }
@@ -999,13 +1160,26 @@ public class LevelProgressionManager : MonoBehaviour
         // Read persisted values with safe fallbacks:
         // - index defaults to 0 (first level)
         // - completion defaults to false
+        // - run seed defaults to "not present" (generated after load if needed)
         int loadedIndex = PlayerPrefs.GetInt(indexKey, 0);
         bool loadedCompleted = PlayerPrefs.GetInt(completedKey, 0) == 1;
+        string runSeedKey = BuildRunSaveKey("run_seed");
 
         // Sanitize before assigning:
         // - index should never be negative
         currentLevelIndex = Mathf.Max(0, loadedIndex);
         runCompleted = loadedCompleted;
+
+        if (useRunSeed && RunSeedService.TryLoadSeed(runSeedKey, out int loadedRunSeed))
+        {
+            currentRunSeed = loadedRunSeed;
+            hasRunSeed = true;
+        }
+        else
+        {
+            currentRunSeed = 0;
+            hasRunSeed = false;
+        }
     }
 
 
@@ -1034,6 +1208,14 @@ public class LevelProgressionManager : MonoBehaviour
 
             PlayerPrefs.SetInt(indexKey, Mathf.Max(0, currentLevelIndex));
             PlayerPrefs.SetInt(completedKey, runCompleted ? 1 : 0);
+
+            // Run seed is persisted with progression so Continue can recreate the same run distribution.
+            if (useRunSeed)
+            {
+                EnsureRunSeedInitialized(saveIfGenerated: false);
+                RunSeedService.SaveSeed(BuildRunSaveKey("run_seed"), currentRunSeed, saveNow: false);
+            }
+
             PlayerPrefs.Save();
         }
 
@@ -1053,6 +1235,7 @@ public class LevelProgressionManager : MonoBehaviour
         {
             PlayerPrefs.DeleteKey(BuildRunSaveKey("level_index"));
             PlayerPrefs.DeleteKey(BuildRunSaveKey("run_completed"));
+            RunSeedService.ClearSeed(BuildRunSaveKey("run_seed"), saveNow: false);
             PlayerPrefs.Save();
         }
 
@@ -1104,6 +1287,113 @@ public class LevelProgressionManager : MonoBehaviour
         }
 
         return new string(chars);
+    }
+
+    /// <summary>
+    /// Editor utility: writes current procedural runtime layout cell data back into
+    /// the current sequence entry's source WorldLayout2D asset.
+    /// Use this after finding a generated layout variant you want to keep.
+    /// </summary>
+    [ContextMenu("Bake Current Procedural Layout To Source Asset")]
+    public void BakeCurrentProceduralLayoutToSourceAsset()
+    {
+#if UNITY_EDITOR
+        if (levelSequence == null)
+        {
+            Debug.LogError("LevelProgressionManager: Cannot bake layout because levelSequence is null.");
+            return;
+        }
+
+        if (currentLevelIndex < 0 || currentLevelIndex >= levelSequence.LevelCount)
+        {
+            Debug.LogError($"LevelProgressionManager: Cannot bake layout at invalid level index {currentLevelIndex}.");
+            return;
+        }
+
+        SequenceLevelEntry entry = levelSequence.GetEntryAt(currentLevelIndex);
+        if (entry == null || entry.layout == null)
+        {
+            Debug.LogError($"LevelProgressionManager: Cannot bake layout because sequence entry {currentLevelIndex} is invalid.");
+            return;
+        }
+
+        bool proceduralPassEnabled = useProceduralVisualGeneration || useProceduralTierDistribution;
+        if (!proceduralPassEnabled)
+        {
+            Debug.LogWarning("LevelProgressionManager: Bake skipped because procedural generation is disabled.");
+            return;
+        }
+
+        // If no runtime generated layout exists yet, build one now for the current index.
+        if (runtimeProceduralLayoutInstance == null)
+        {
+            runtimeProceduralLayoutInstance = BuildRuntimeProceduralLayout(entry, currentLevelIndex);
+        }
+
+        if (runtimeProceduralLayoutInstance == null)
+        {
+            Debug.LogError("LevelProgressionManager: Failed to build runtime procedural layout for baking.");
+            return;
+        }
+
+        CopyLayoutCells(runtimeProceduralLayoutInstance, entry.layout);
+        UnityEditor.EditorUtility.SetDirty(entry.layout);
+        UnityEditor.AssetDatabase.SaveAssets();
+
+        Debug.Log(
+            $"LevelProgressionManager: Baked runtime procedural layout into asset '{entry.layout.name}' " +
+            $"(color={entry.colorId}, tier={entry.tierInColor}, index={currentLevelIndex}).");
+#else
+        Debug.LogWarning("LevelProgressionManager: Bake is editor-only.");
+#endif
+    }
+
+    /// <summary>
+    /// Deep-copies all cell payload fields from source layout to target layout.
+    /// Width/height are synchronized before writing cells.
+    /// </summary>
+    private static void CopyLayoutCells(WorldLayout2D source, WorldLayout2D target)
+    {
+        if (source == null || target == null)
+        {
+            return;
+        }
+
+        target.width = source.width;
+        target.height = source.height;
+        target.cellSize = source.cellSize;
+        target.worldOrigin = source.worldOrigin;
+        target.EnsureCellArraySize();
+
+        for (int y = 0; y < source.height; y++)
+        {
+            for (int x = 0; x < source.width; x++)
+            {
+                BlockCellData src = source.GetCell(x, y);
+                target.SetCell(x, y, CloneCellData(src));
+            }
+        }
+    }
+
+    /// <summary>
+    /// Creates a detached copy of one cell payload so target asset does not share object refs.
+    /// </summary>
+    private static BlockCellData CloneCellData(BlockCellData source)
+    {
+        if (source == null)
+        {
+            return new BlockCellData();
+        }
+
+        return new BlockCellData
+        {
+            hasBlock = source.hasBlock,
+            tier = source.tier,
+            isSpecialConditionBlock = source.isSpecialConditionBlock,
+            specialBlockTypeId = source.specialBlockTypeId,
+            canBeDestroyed = source.canBeDestroyed,
+            heightOffset = source.heightOffset
+        };
     }
 
     [ContextMenu("Clear Saved Progression (Debug)")]

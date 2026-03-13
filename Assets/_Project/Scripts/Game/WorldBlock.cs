@@ -30,6 +30,8 @@ public class WorldBlock : MonoBehaviour
     [SerializeField] private float minVisualScale = 0.35f;
     [Tooltip("Optional explicit renderers that receive tier material. If empty, all child MeshRenderers are used.")]
     [SerializeField] private MeshRenderer[] tierMaterialRenderers;
+    [Tooltip("Optional presenter for status icons shown above this block.")]
+    [SerializeField] private StatusIconView statusIconView;
 
     private Vector3 initialVisualScale;
     private MeshRenderer[] cachedTierMaterialRenderers;
@@ -66,6 +68,7 @@ public class WorldBlock : MonoBehaviour
     public int CurrentHp => currentHp;
     public int GlassReward => glassReward;
     public bool IsSpecialConditionBlock => isSpecialConditionBlock;
+    public StatusIconView StatusIconView => statusIconView;
 
 
 
@@ -179,11 +182,49 @@ public class WorldBlock : MonoBehaviour
             visualRoot = transform;
         }
 
+        if (statusIconView == null)
+        {
+            statusIconView = GetComponentInChildren<StatusIconView>(true);
+        }
+
         isInitialized = true;
 
 
         initialVisualScale = visualRoot.localScale;
         ApplyScaleFromHp();
+    }
+
+    /// <summary>
+    /// Shows a status icon by logical icon key (example: marked, shield, bomb).
+    /// Returns false when icon view is missing or key is not configured.
+    /// </summary>
+    public bool ShowStatusIcon(string iconId)
+    {
+        if (statusIconView == null)
+        {
+            statusIconView = GetComponentInChildren<StatusIconView>(true);
+        }
+
+        if (statusIconView == null)
+        {
+            Debug.LogWarning($"WorldBlock '{name}' cannot show status icon '{iconId}' because StatusIconView is missing.");
+            return false;
+        }
+
+        return statusIconView.ShowIcon(iconId);
+    }
+
+    /// <summary>
+    /// Clears active status icon from this block.
+    /// </summary>
+    public void ClearStatusIcon()
+    {
+        if (statusIconView == null)
+        {
+            return;
+        }
+
+        statusIconView.ClearIcon();
     }
 
 
@@ -351,6 +392,18 @@ public class WorldBlock : MonoBehaviour
     /// </summary>
     public bool CanBeDestroyed => canBeDestroyed;
 
+    [ContextMenu("Debug/Show Status Icon (marked)")]
+    private void DebugShowMarkedStatusIcon()
+    {
+        ShowStatusIcon(BlockStatusIconIds.Marked);
+    }
+
+    [ContextMenu("Debug/Clear Status Icon")]
+    private void DebugClearStatusIcon()
+    {
+        ClearStatusIcon();
+    }
+
 
     private void OnDisable()
     {
@@ -358,6 +411,8 @@ public class WorldBlock : MonoBehaviour
         {
             visualRoot.DOKill(false);
         }
+
+        ClearStatusIcon();
     }
 
 
