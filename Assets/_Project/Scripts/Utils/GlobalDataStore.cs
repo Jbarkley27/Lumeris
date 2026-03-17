@@ -11,6 +11,7 @@ public class GlobalDataStore : MonoBehaviour
     public CinemachineCamera CineCam;
     public InputManager InputManager;
     public float nearClip = -50f;
+    public IntermissionUIController IntermissionUIController;
 
     private void Awake()
     {

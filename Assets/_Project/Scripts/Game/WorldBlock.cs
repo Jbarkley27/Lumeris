@@ -304,6 +304,7 @@ public class WorldBlock : MonoBehaviour
 
 
         currentHp = Mathf.Max(0, currentHp - damageAmount);
+        GlobalDataStore.Instance.IntermissionUIController.AddRoundDamage(damageAmount);
         hitFlashModule?.FlashAll();
         ApplyScaleFromHp();
         RaiseDamagePopupRequest(damageAmount, false);

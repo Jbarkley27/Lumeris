@@ -20,14 +20,29 @@ MonoBehaviour:
     layout: {fileID: 11400000, guid: f11bb1416ee0949c5b85a1261f585b8d, type: 2}
   - colorId: blue
     tierInColor: 2
-    layout: {fileID: 11400000, guid: 50b896df3403a44528b600a29b9b7764, type: 2}
+    layout: {fileID: 11400000, guid: fafff9485012e4b1c991bd6cbdc55fb7, type: 2}
   - colorId: blue
     tierInColor: 3
-    layout: {fileID: 11400000, guid: 39e1d10ec4f3d462289d32a6529c96ab, type: 2}
+    layout: {fileID: 11400000, guid: a6f0b6b5720e84f11b2232ebb3920f83, type: 2}
   - colorId: blue
     tierInColor: 4
-    layout: {fileID: 11400000, guid: 6709f53d5162f4415b9c55270a7805bb, type: 2}
+    layout: {fileID: 11400000, guid: 1058b8ad6ab824a4995ab8313908b0bf, type: 2}
   - colorId: blue
     tierInColor: 5
-    layout: {fileID: 11400000, guid: 60295c093e9574803bcdbd453861c2c7, type: 2}
+    layout: {fileID: 11400000, guid: bc7121f1329f941b1b9eee5b4d63f1d7, type: 2}
+  - colorId: green
+    tierInColor: 1
+    layout: {fileID: 11400000, guid: 243843655d1944fe6a09beb44240dd18, type: 2}
+  - colorId: green
+    tierInColor: 2
+    layout: {fileID: 11400000, guid: 6c08e1b9fd4294c9f9302f48621dfaa5, type: 2}
+  - colorId: green
+    tierInColor: 3
+    layout: {fileID: 11400000, guid: 41e21c1aba83b45a4935ab1f33b57512, type: 2}
+  - colorId: green
+    tierInColor: 4
+    layout: {fileID: 11400000, guid: b426a24ca4dff4610805673f2f8633ed, type: 2}
+  - colorId: green
+    tierInColor: 5
+    layout: {fileID: 11400000, guid: ded0264dfee8447ce87b2a3ef15794e6, type: 2}
   logValidationMessages: 1

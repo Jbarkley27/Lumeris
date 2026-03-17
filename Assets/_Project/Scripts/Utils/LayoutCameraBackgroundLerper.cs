@@ -16,25 +16,25 @@ public class LayoutCameraBackgroundLerper : MonoBehaviour
     [SerializeField] private float transitionDuration = 0.6f;
     [SerializeField] private bool forceSolidColorClearFlags = true;
     [SerializeField] private bool applyCurrentLayoutOnEnable = true;
+    [Tooltip("If true, keeps trying to resolve loader/camera at runtime in case they spawn later.")]
+    [SerializeField] private bool autoResolveReferencesAtRuntime = true;
+    [Tooltip("If true, polling fallback applies color when floorId changes even if event timing was missed.")]
+    [SerializeField] private bool pollForLayoutChanges = true;
 
     private Coroutine lerpRoutine;
+    private string lastAppliedFloorId = string.Empty;
+    private WorldGridLoader subscribedWorldGridLoader;
 
     private void Awake()
     {
-        if (worldGridLoader == null)
-            worldGridLoader = FindFirstObjectByType<WorldGridLoader>();
-
-        if (targetCamera == null)
-            targetCamera = Camera.main;
-
-        if (forceSolidColorClearFlags && targetCamera != null)
-            targetCamera.clearFlags = CameraClearFlags.SolidColor;
+        ResolveReferences();
+        ApplySolidColorClearFlagsIfNeeded();
     }
 
     private void OnEnable()
     {
-        if (worldGridLoader != null)
-            worldGridLoader.WorldLoaded += OnWorldLoaded;
+        ResolveReferences();
+        EnsureWorldLoadedSubscription();
 
         if (applyCurrentLayoutOnEnable && worldGridLoader != null && worldGridLoader.CurrentLoadedLayout != null)
             ApplyLayoutColor(worldGridLoader.CurrentLoadedLayout, immediate: true);
@@ -42,13 +42,40 @@ public class LayoutCameraBackgroundLerper : MonoBehaviour
 
     private void OnDisable()
     {
-        if (worldGridLoader != null)
-            worldGridLoader.WorldLoaded -= OnWorldLoaded;
+        RemoveWorldLoadedSubscription();
 
         if (lerpRoutine != null)
         {
             StopCoroutine(lerpRoutine);
             lerpRoutine = null;
+        }
+    }
+
+    private void Update()
+    {
+        if (!autoResolveReferencesAtRuntime && !pollForLayoutChanges)
+        {
+            return;
+        }
+
+        if (autoResolveReferencesAtRuntime)
+        {
+            // Handles cases where camera/loader are instantiated after this component.
+            ResolveReferences();
+            ApplySolidColorClearFlagsIfNeeded();
+            EnsureWorldLoadedSubscription();
+        }
+
+        if (!pollForLayoutChanges || worldGridLoader == null || worldGridLoader.CurrentLoadedLayout == null)
+        {
+            return;
+        }
+
+        // Fallback sync in case event order caused us to miss an apply.
+        string currentFloorId = worldGridLoader.CurrentLoadedLayout.floorId;
+        if (!string.Equals(lastAppliedFloorId, currentFloorId, System.StringComparison.Ordinal))
+        {
+            ApplyLayoutColor(worldGridLoader.CurrentLoadedLayout, immediate: false);
         }
     }
 
@@ -59,9 +86,22 @@ public class LayoutCameraBackgroundLerper : MonoBehaviour
 
     private void ApplyLayoutColor(WorldLayout2D layout, bool immediate)
     {
-        if (layout == null || targetCamera == null)
+        if (layout == null)
             return;
 
+        // Retry camera resolve right before applying.
+        if (targetCamera == null)
+        {
+            targetCamera = Camera.main;
+        }
+
+        if (targetCamera == null)
+            return;
+
+        ApplySolidColorClearFlagsIfNeeded();
+
+        // Track applied floor so polling fallback doesn't repeatedly re-apply.
+        lastAppliedFloorId = layout.floorId;
         Color target = layout.CameraBackgroundColor;
 
         if (immediate || transitionDuration <= 0f)
@@ -91,5 +131,60 @@ public class LayoutCameraBackgroundLerper : MonoBehaviour
 
         targetCamera.backgroundColor = target;
         lerpRoutine = null;
+    }
+
+    private void ResolveReferences()
+    {
+        if (worldGridLoader == null)
+        {
+            worldGridLoader = FindFirstObjectByType<WorldGridLoader>();
+        }
+
+        if (targetCamera == null)
+        {
+            targetCamera = Camera.main;
+        }
+    }
+
+    private void EnsureWorldLoadedSubscription()
+    {
+        if (worldGridLoader == null)
+        {
+            return;
+        }
+
+        if (subscribedWorldGridLoader == worldGridLoader)
+        {
+            return;
+        }
+
+        // If loader reference changed, unsubscribe from the old one first.
+        RemoveWorldLoadedSubscription();
+        worldGridLoader.WorldLoaded += OnWorldLoaded;
+        subscribedWorldGridLoader = worldGridLoader;
+    }
+
+    private void RemoveWorldLoadedSubscription()
+    {
+        if (subscribedWorldGridLoader == null)
+        {
+            return;
+        }
+
+        subscribedWorldGridLoader.WorldLoaded -= OnWorldLoaded;
+        subscribedWorldGridLoader = null;
+    }
+
+    private void ApplySolidColorClearFlagsIfNeeded()
+    {
+        if (!forceSolidColorClearFlags || targetCamera == null)
+        {
+            return;
+        }
+
+        if (targetCamera.clearFlags != CameraClearFlags.SolidColor)
+        {
+            targetCamera.clearFlags = CameraClearFlags.SolidColor;
+        }
     }
 }

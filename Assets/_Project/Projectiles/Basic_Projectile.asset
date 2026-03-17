@@ -19,7 +19,7 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 31
-  damage: 1
+  damage: 100
   destroyOnFirstHit: 1
   maxHitsBeforeDespawn: 1
   muzzleVfxPrefab: {fileID: 4462527361317752304, guid: ee7a76fbefe744ca7be48f8258bd2fb3, type: 3}

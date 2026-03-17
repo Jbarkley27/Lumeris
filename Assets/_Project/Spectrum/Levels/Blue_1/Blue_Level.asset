@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Blue_Level
   m_EditorClassIdentifier: Assembly-CSharp::WorldLayout2D
   floorId: blue_01
-  width: 10
-  height: 10
+  width: 5
+  height: 8
   cellSize: 7
   worldOrigin: {x: 0, y: 0, z: 0}
   cells:
@@ -72,18 +72,6 @@ MonoBehaviour:
     specialBlockTypeId: 
     canBeDestroyed: 1
     heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 0
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
   - hasBlock: 0
     tier: 1
     isSpecialConditionBlock: 0
@@ -91,42 +79,6 @@ MonoBehaviour:
     canBeDestroyed: 1
     heightOffset: 0
   - hasBlock: 0
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
     tier: 1
     isSpecialConditionBlock: 0
     specialBlockTypeId: 
@@ -144,49 +96,13 @@ MonoBehaviour:
     specialBlockTypeId: 
     canBeDestroyed: 1
     heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 0
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 0
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
   - hasBlock: 0
     tier: 1
     isSpecialConditionBlock: 0
     specialBlockTypeId: 
     canBeDestroyed: 1
     heightOffset: 0
-  - hasBlock: 1
+  - hasBlock: 0
     tier: 1
     isSpecialConditionBlock: 0
     specialBlockTypeId: 
@@ -204,109 +120,7 @@ MonoBehaviour:
     specialBlockTypeId: 
     canBeDestroyed: 1
     heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 1
-    specialBlockTypeId: story
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
   - hasBlock: 0
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
     tier: 1
     isSpecialConditionBlock: 0
     specialBlockTypeId: 
@@ -318,73 +132,7 @@ MonoBehaviour:
     specialBlockTypeId: 
     canBeDestroyed: 1
     heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
+  - hasBlock: 0
     tier: 1
     isSpecialConditionBlock: 0
     specialBlockTypeId: 
@@ -396,37 +144,7 @@ MonoBehaviour:
     specialBlockTypeId: 
     canBeDestroyed: 1
     heightOffset: 0
-  - hasBlock: 1
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
+  - hasBlock: 0
     tier: 1
     isSpecialConditionBlock: 0
     specialBlockTypeId: 
@@ -438,170 +156,8 @@ MonoBehaviour:
     specialBlockTypeId: 
     canBeDestroyed: 1
     heightOffset: 0
-  - hasBlock: 1
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 1
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
   - hasBlock: 0
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 0
-    tier: 3
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 0
-    tier: 3
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 0
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 0
-    tier: 2
-    isSpecialConditionBlock: 0
-    specialBlockTypeId: 
-    canBeDestroyed: 1
-    heightOffset: 0
-  - hasBlock: 1
-    tier: 2
+    tier: 1
     isSpecialConditionBlock: 0
     specialBlockTypeId: 
     canBeDestroyed: 1
@@ -612,7 +168,91 @@ MonoBehaviour:
     specialBlockTypeId: 
     canBeDestroyed: 1
     heightOffset: 0
-  - hasBlock: 1
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
+    tier: 1
+    isSpecialConditionBlock: 0
+    specialBlockTypeId: 
+    canBeDestroyed: 1
+    heightOffset: 0
+  - hasBlock: 0
     tier: 1
     isSpecialConditionBlock: 0
     specialBlockTypeId: 

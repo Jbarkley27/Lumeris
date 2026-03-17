@@ -194,6 +194,11 @@ public class LevelProgressionManager : MonoBehaviour
 
     private Coroutine pendingAutoAdvanceRoutine;
     private WorldLayout2D runtimeProceduralLayoutInstance;
+    // The exact sequence index we intend to load next.
+    // This prevents wrong index resolution when floorId lookup is ambiguous.
+    private int pendingLoadSequenceIndex = -1;
+    // Guards against double-advance from repeated UI clicks or duplicate listeners.
+    private bool isLevelTransitionInFlight = false;
 
     public int CurrentLevelIndex => currentLevelIndex;
     public bool IsRunCompleted => runCompleted;
@@ -236,6 +241,155 @@ public class LevelProgressionManager : MonoBehaviour
     /// Exposes active run seed (0 when not initialized).
     /// </summary>
     public int DebugCurrentRunSeed => hasRunSeed ? currentRunSeed : 0;
+
+
+    // Round state for the new timer-based objective loop.
+    public enum RoundState
+    {
+        Playing,   // Round actively running, timer ticking.
+        Won,       // Player cleared all blocks in time.
+        Lost,      // Timer hit 0 before full clear.
+        RoundOver  // Transitional/idle state between loads.
+    }
+
+    [Header("Round Timer Objective (MVP1)")]
+    [Tooltip("If true, objective is always 100% block clear before timer reaches zero.")]
+    [SerializeField] private bool useRoundTimerObjective = true;
+
+    [Min(1f)]
+    [Tooltip("Base time used before multipliers are applied.")]
+    [SerializeField] private float baseRoundSeconds = 120f;
+
+    [Min(0.01f)]
+    [Tooltip("Global world difficulty multiplier for round duration formula.")]
+    [SerializeField] private float worldDifficultyMultiplier = 1f;
+
+    [Range(0.5f, 1.25f)]
+    [Tooltip("Per-level multiplier curve driver. <1 makes rounds shorter as levels increase.")]
+    [SerializeField] private float progressionTimeDecayPerLevel = 0.97f;
+
+    [Min(1f)]
+    [Tooltip("Hard lower clamp for computed round duration.")]
+    [SerializeField] private float minRoundSeconds = 20f;
+
+    [Min(1f)]
+    [Tooltip("Hard upper clamp for computed round duration.")]
+    [SerializeField] private float maxRoundSeconds = 240f;
+
+    [Header("Round Runtime (Read Only)")]
+    [SerializeField] private RoundState roundState = RoundState.RoundOver;
+    [SerializeField] private float currentRoundDurationSeconds = 0f;
+    [SerializeField] private float remainingRoundSeconds = 0f;
+
+    // UI/hooks can subscribe to these instead of polling old objective logic.
+    public event Action RoundWon;
+    public event Action RoundLost;
+    public event Action<RoundState> RoundEnded;
+
+    public RoundState CurrentRoundState => roundState;
+    public float CurrentRoundDurationSeconds => currentRoundDurationSeconds;
+    public float RemainingRoundSeconds => remainingRoundSeconds;
+
+
+
+
+    private void Update()
+    {
+        // New loop only: timer runs while round is active.
+        if (useRoundTimerObjective)
+        {
+            TickRoundTimer(Time.deltaTime);
+        }
+    }
+
+    /// <summary>
+    /// Computes round duration based on base time, world scalar, and progression decay.
+    /// Formula: base * world * progression
+    /// </summary>
+    private float CalculateRoundDurationSeconds(int levelIndex)
+    {
+        float safeBase = Mathf.Max(1f, baseRoundSeconds);
+        float safeWorld = Mathf.Max(0.01f, worldDifficultyMultiplier);
+
+        // Example: levelIndex=0 => multiplier 1.0
+        //          levelIndex=1 => multiplier progressionTimeDecayPerLevel
+        float progressionMultiplier = Mathf.Pow(
+            Mathf.Clamp(progressionTimeDecayPerLevel, 0.5f, 1.25f),
+            Mathf.Max(0, levelIndex));
+
+        float computed = safeBase * safeWorld * progressionMultiplier;
+        return Mathf.Clamp(computed, Mathf.Max(1f, minRoundSeconds), Mathf.Max(minRoundSeconds, maxRoundSeconds));
+    }
+
+    /// <summary>
+    /// Called after level load completes and targets are known.
+    /// Starts timer and enters Playing state.
+    /// </summary>
+    private void StartRoundTimerForCurrentLevel()
+    {
+        currentRoundDurationSeconds = CalculateRoundDurationSeconds(currentLevelIndex);
+        remainingRoundSeconds = currentRoundDurationSeconds;
+        roundState = RoundState.Playing;
+    }
+
+    /// <summary>
+    /// Per-frame timer update. Timer only ticks during Playing.
+    /// </summary>
+    private void TickRoundTimer(float deltaTime)
+    {
+        if (!useRoundTimerObjective)
+        {
+            return;
+        }
+
+        if (roundState != RoundState.Playing)
+        {
+            return;
+        }
+
+        remainingRoundSeconds = Mathf.Max(0f, remainingRoundSeconds - Mathf.Max(0f, deltaTime));
+
+        if (remainingRoundSeconds <= 0f)
+        {
+            HandleRoundLost();
+        }
+    }
+
+    private void HandleRoundWon()
+    {
+        if (roundState != RoundState.Playing)
+        {
+            return;
+        }
+
+        roundState = RoundState.Won;
+        RoundWon?.Invoke();
+        RoundEnded?.Invoke(roundState);
+    }
+
+    private void HandleRoundLost()
+    {
+        if (roundState != RoundState.Playing)
+        {
+            return;
+        }
+
+        roundState = RoundState.Lost;
+        remainingRoundSeconds = 0f;
+
+        RoundLost?.Invoke();
+        RoundEnded?.Invoke(roundState);
+    }
+
+
+
+
+
+
+
+
+
+
 
     /// <summary>
     /// Debug helper to read currently saved progression values without mutating runtime state.
@@ -323,14 +477,25 @@ public class LevelProgressionManager : MonoBehaviour
     {
         if (levelSequence == null)
         {
+            isLevelTransitionInFlight = false;
             return;
         }
 
+        // Prevent accidental multi-advance if Next is triggered more than once before load completes.
+        if (isLevelTransitionInFlight)
+        {
+            return;
+        }
+
+        isLevelTransitionInFlight = true;
         currentLevelIndex++;
 
+        Debug.Log("Current Level Index = " + currentLevelIndex);
+        Debug.Log("Level Count = " + levelSequence.LevelCount);
         // Completion sentinel: currentLevelIndex == LevelCount means run complete.
         if (currentLevelIndex >= levelSequence.LevelCount)
         {
+            Debug.Log("Run completed!");
             runCompleted = true;
             currentLevelIndex = levelSequence.LevelCount;
 
@@ -344,6 +509,7 @@ public class LevelProgressionManager : MonoBehaviour
 
             SavePersistentProgressState(emitSaveFeedbackEvents);
             RefreshColorProgressUI();
+            isLevelTransitionInFlight = false;
             return;
         }
 
@@ -836,12 +1002,17 @@ public class LevelProgressionManager : MonoBehaviour
 
         if (levelSequence == null || worldGridLoader == null)
         {
+            // Fail-safe: never leave transition lock active after a failed load attempt.
+            pendingLoadSequenceIndex = -1;
+            isLevelTransitionInFlight = false;
             Debug.LogError("LevelProgressionManager: Missing levelSequence or worldGridLoader.");
             return;
         }
 
         if (!levelSequence.Validate(logMessages: false))
         {
+            pendingLoadSequenceIndex = -1;
+            isLevelTransitionInFlight = false;
             Debug.LogError("LevelProgressionManager: LevelSequenceDefinition validation failed.");
             return;
         }
@@ -858,12 +1029,16 @@ public class LevelProgressionManager : MonoBehaviour
 
             SavePersistentProgressState(emitSaveFeedbackEvents);
             RefreshColorProgressUI();
+            pendingLoadSequenceIndex = -1;
+            isLevelTransitionInFlight = false;
             return;
         }
 
         SequenceLevelEntry entry = levelSequence.GetEntryAt(currentLevelIndex);
         if (entry == null || entry.layout == null)
         {
+            pendingLoadSequenceIndex = -1;
+            isLevelTransitionInFlight = false;
             Debug.LogError($"LevelProgressionManager: Invalid sequence entry at index {currentLevelIndex}.");
             return;
         }
@@ -884,9 +1059,20 @@ public class LevelProgressionManager : MonoBehaviour
 
         if (layoutToLoad == null)
         {
+            pendingLoadSequenceIndex = -1;
+            isLevelTransitionInFlight = false;
             Debug.LogError("LevelProgressionManager: Failed to resolve runtime layout for loading.");
             return;
         }
+
+        // Reset runtime round state before a fresh load begins.
+        roundState = RoundState.RoundOver;
+        currentRoundDurationSeconds = 0f;
+        remainingRoundSeconds = 0f;
+
+        // Pin intended sequence index to this load call.
+        // OnWorldLoaded will consume this value instead of relying only on floorId lookup.
+        pendingLoadSequenceIndex = currentLevelIndex;
 
         worldGridLoader.LoadSpecificLayout(layoutToLoad);
     }
@@ -901,13 +1087,27 @@ public class LevelProgressionManager : MonoBehaviour
             return;
         }
 
-        int resolvedIndex = levelSequence.GetIndexByFloorId(loadedLayout.floorId);
+        // Prefer explicitly requested load index.
+        int resolvedIndex = pendingLoadSequenceIndex;
+
+        // Fallback for debug/manual loads where no explicit pending index exists.
+        if (resolvedIndex < 0 || resolvedIndex >= levelSequence.LevelCount)
+        {
+            resolvedIndex = levelSequence.GetIndexByFloorId(loadedLayout.floorId);
+        }
+
         if (resolvedIndex < 0)
         {
+            // Prevent transition lock from getting stuck on non-sequence/debug loads.
+            pendingLoadSequenceIndex = -1;
+            isLevelTransitionInFlight = false;
             // Ignore non-sequence loads.
             return;
         }
 
+        // Clear transition flags now that a valid load completed.
+        pendingLoadSequenceIndex = -1;
+        isLevelTransitionInFlight = false;
         currentLevelIndex = resolvedIndex;
         runCompleted = false;
         SavePersistentProgressState(emitSaveFeedbackEvents);
@@ -918,9 +1118,34 @@ public class LevelProgressionManager : MonoBehaviour
         activeTierInColor = activeEntry != null ? activeEntry.tierInColor : 1;
 
         RebuildObjectiveTargetsFromSpawnedBlocks();
-        ConfigureObjectiveRule();
+
+        // In new timer mode, objective is always full clear.
+        if (useRoundTimerObjective)
+        {
+            activeObjectiveRule = LevelObjectiveRule.DestroyRegularPercent;
+            activeRequiredPercent = 1f;
+        }
+        else
+        {
+            // Legacy behavior remains available while migrating.
+            ConfigureObjectiveRule();
+        }
+
         EvaluateObjectiveProgress();
         RefreshColorProgressUI();
+
+        // Start round timer after counters are valid.
+        if (useRoundTimerObjective)
+        {
+            StartRoundTimerForCurrentLevel();
+
+            // Edge case: empty map or already complete should resolve instantly.
+            if (objectiveCompleted)
+            {
+                HandleRoundWon();
+            }
+        }
+
 
         if (logProgression)
         {
@@ -1017,12 +1242,19 @@ public class LevelProgressionManager : MonoBehaviour
             return;
         }
 
-        if (!string.Equals(block.FloorId, activeFloorId, System.StringComparison.Ordinal))
+        // Ignore out-of-level events.
+        if (!string.Equals(block.FloorId, activeFloorId, StringComparison.Ordinal))
         {
             return;
         }
 
         if (!block.CanBeDestroyed)
+        {
+            return;
+        }
+
+        // In timer mode, only process block destruction while actively playing.
+        if (useRoundTimerObjective && roundState != RoundState.Playing)
         {
             return;
         }
@@ -1041,17 +1273,103 @@ public class LevelProgressionManager : MonoBehaviour
         EvaluateObjectiveProgress();
         RefreshColorProgressUI();
 
+        // New mode: instant round win when objective completes.
+        if (useRoundTimerObjective)
+        {
+            if (!wasCompleted && objectiveCompleted)
+            {
+                HandleRoundWon();
+            }
+
+            return;
+        }
+
+        // Legacy mode behavior.
         if (!wasCompleted && objectiveCompleted)
         {
             OnCurrentLevelObjectiveCompleted();
         }
     }
 
+
+    
+
     /// <summary>
-    /// Computes objectiveProgress01 and completion flag from current counters.
+    /// Round-end UI hook: retry current level after a loss (or from RoundOver debug).
+    /// </summary>
+    public void RetryCurrentLevelRound()
+    {
+        if (useRoundTimerObjective && roundState == RoundState.Playing)
+        {
+            return;
+        }
+
+        ReloadCurrentLevel();
+    }
+
+    /// <summary>
+    /// Round-end UI hook: advance only after a win.
+    /// </summary>
+    public void ContinueToNextLevelAfterRoundWin()
+    {
+        if (useRoundTimerObjective && roundState != RoundState.Won)
+        {
+            Debug.LogWarning("ContinueToNextLevelAfterRoundWin called but round not won.");
+            return;
+        }
+
+        GoToNextLevel();
+    }
+
+
+
+    public bool TryGetLevelLabelAtIndex(int levelIndex, out string label)
+    {
+        label = "Unknown";
+
+        if (levelSequence == null || levelIndex < 0 || levelIndex >= levelSequence.LevelCount)
+        {
+            return false;
+        }
+
+        SequenceLevelEntry entry = levelSequence.GetEntryAt(levelIndex);
+        if (entry == null)
+        {
+            return false;
+        }
+
+        string color = string.IsNullOrWhiteSpace(entry.colorId) ? "Unknown" : entry.colorId;
+        int tier = Mathf.Max(1, entry.tierInColor);
+        label = $"{color} - Tier {tier}";
+        return true;
+    }
+
+
+
+    /// <summary>
+    /// Computes objective progress and completion flag.
+    /// In timer mode: objective is always full clear of all breakable blocks.
     /// </summary>
     private void EvaluateObjectiveProgress()
     {
+        if (useRoundTimerObjective)
+        {
+            int totalBreakable = totalBreakableRegularBlocks + totalBreakableSpecialBlocks;
+            int destroyedBreakable = destroyedBreakableRegularBlocks + destroyedBreakableSpecialBlocks;
+
+            if (totalBreakable <= 0)
+            {
+                objectiveProgress01 = 1f;
+                objectiveCompleted = true;
+                return;
+            }
+
+            objectiveProgress01 = Mathf.Clamp01((float)destroyedBreakable / totalBreakable);
+            objectiveCompleted = destroyedBreakable >= totalBreakable;
+            return;
+        }
+
+        // Legacy branch kept temporarily for migration safety.
         if (activeObjectiveRule == LevelObjectiveRule.DestroyRegularPercent)
         {
             if (totalBreakableRegularBlocks <= 0 || activeRequiredPercent <= 0f)
@@ -1077,6 +1395,11 @@ public class LevelProgressionManager : MonoBehaviour
         objectiveProgress01 = destroyedBreakableSpecialBlocks > 0 ? 1f : 0f;
         objectiveCompleted = destroyedBreakableSpecialBlocks > 0;
     }
+
+
+
+
+
 
     private void OnCurrentLevelObjectiveCompleted()
     {

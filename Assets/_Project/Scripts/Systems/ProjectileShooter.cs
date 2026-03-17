@@ -57,6 +57,17 @@ public class ProjectileShooter : MonoBehaviour
             return;
         }
 
+
+        // Hard stop while intermission is open.
+        // This prevents firing even if input is still pressed.
+        if (GlobalDataStore.Instance != null &&
+            GlobalDataStore.Instance.IntermissionUIController != null &&
+            GlobalDataStore.Instance.IntermissionUIController.IsIntermissionOpen)
+        {
+            return;
+        }
+
+
         nextBlasterShotTime = Time.time + shotInterval;
         FireProjectileTowardsDirection(blasterDefinition, GetAimDirection());
     }
